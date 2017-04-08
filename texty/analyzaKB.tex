@@ -1,0 +1,34 @@
+%Ve vybrané bankovní organizaci analyzujte požadavky na připojení vlastních zařízení a identifikujte hlavní hrozby související s nasazením BYOD.
+
+
+\section{Aktuální stav připojování soukromých zařízení}\todo{Učesat a zformulovat}
+
+Is.kb.cz je informační systém. Obsahuje service desk pro přidávání zařízení. Toto je outsourcováno na firmu HP. Firma Alef naimplementovala MAPkeeper. Jedná se o service manager. Je to nadstavba nad systémem Cisco AnyConnect ISE.
+
+
+Schéma přidání výjimky je následující: přidá se požadavek, dále probíhá schvalování, požadavek je vyhodnocen IT security a po schválení je zadání výjimky outsourcováno na externí firmu (HP).
+
+Systém ISE řídí nasměrování zařízení do VLAN. ISE je program od cisca. Information security engine. Řídí práva zařízení. Je to high level - na úrovni topologie sítě. Vyjímky jsou je možné najít v MAPkeeperu pod Approved devices. MapKeeper slouží pro distribuci správy. Používá se Mac address bypass i další metody co mohou selhat. Pokud dojde při ověření MAC adresy k chybě, použije se  802.1.X  Podle MAC adresy se určuje správná VLAN.
+
+Jelikož BYOD nemají autorizační certifikát, používá se autorizační funkce. Uživatel s vlastním zařízením s uznanou výjímkou se připojuje do stejné VLAN jako KB zařízení.
+
+
+Pro připojení do sítě se používají CISCO ISE a VPNky. Dochází k různým kontrolám.
+Další kontroly umožňuje cisco ISE plus, kdy na jednoho uživatele je zapotřebí jedna licence. KB momentálně vlastní balík 500 licencí. Cena byla zhruba pul milionu korun. Bude docházet k výměně zařízení ASA. Licence budou převedeny.
+
+
+NACS - dochází k problému, kdy při změně zásuvky, může být uživateli přidělena jiná VLAN.
+
+
+WIFI - co se týče admin sítí, přístup je možný pouze přes terminál. Jedná se o standardní datovou síť. Není vůle rozšiřovat možnosti wifi. Pro přístup je třeba machine certifikát. Důvodem je dostupnost sítě také přes zeď.
+
+Dále existuje guest wifi pro přístup na internet. Probíhá na ní URL filtrace.
+
+
+\section{Analýza aktuálních bezpečnostních rizik}
+Aktuální bezpečnostní rizika jsou vysoká, jelikož dodržování bezpečnosti je jen na dobré slovo. \todo{rozvést, popsat, doplnit byrokracii, doplnit proces, papiry nda, papiry co se musi podepsat... }
+\todo{popsat moznost zaneseni viru atd.}
+
+\section{Analýza požadavků na připojení vlastních zařízení} \todo{Udělat seznam požadavků na BYOD}
+
+\section{Analýza hrozeb souvisejících s nasazením BYOD}
