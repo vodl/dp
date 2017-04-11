@@ -98,7 +98,7 @@ Ostatní řešení byla v \todo{citace} byla prezentována jako mající příli
 
 Vzhledem k požadavkům na bezpečnost a dodržování přísných firemních politik v bance a zároveň k potřebě přístupů k různým typům software a aplikací se zdá jako jediné vhodné řešení BYOD virtualizace desktopu. Způsobů, jakými může virtualizace sloužit pro řešení BYOD je více.
 
-Analýza \ref{Forreste_Wave} z září roku 2015 od společnosti Forrester se zaměřuje na virtuální desktopy umístěné na vlastním serveru. Výhodou oproti DaaS řešení je, že aplikace i data jsou pod úplnou kontrolou IT oddělení, což snižuje riziko ztráty nebo krádeže dat. Nevýhodou těchto řešení může být problémová funkčnost některých periferních zařízení, jako jsou webové kamery nebo tiskárny. Dále jsou tato řešení velmi náročná na stabilitu a rychlost internetového připojení a to především u graficky náročnějších aplikací. 
+Analýza \ref{Forreste_Wave} z září roku 2015 od společnosti Forrester se zaměřuje na virtuální desktopy umístěné na vlastním serveru. Výhodou oproti DaaS řešení je, že aplikace i data jsou pod úplnou kontrolou IT oddělení, což snižuje riziko ztráty nebo krádeže dat. Nevýhodou těchto řešení může být problémová funkčnost některých periferních zařízení, jako jsou webové kamery nebo tiskárny. Dále jsou tato řešení velmi citlivá na stabilitu a rychlost internetového připojení a to především u graficky náročnějších aplikací. 
 
  \begin{figure}[h]\label{Forrester_Wave}
 \includegraphics[width=13cm]{img/Forrester_Wave}
@@ -107,14 +107,20 @@ Analýza \ref{Forreste_Wave} z září roku 2015 od společnosti Forrester se za
 \centering
 \end{figure}\todo{citace https://www.citrix.com/content/dam/citrix/en\_us/documents/products-solutions/forrester-wave-server-hosted-virtual-desktops-q3-2015.pdf}
 
-Průzkum trhu od společnosti IDC z roku 2016 \todo{citovat IDC_VM} \ref{IDC_VM} má širší zaměření, a to na poskytovatele VCC (Virtual Client Computing). Ty definuje jako poskytovatele kteří tvoří a prodávají software pro virtualizaci se zaměřením na centralizované virtuální desktopy, distribuované virtuální desktopy a software pro virtuální uživatelské sezení (VUS).
+Podle této analýzy jsou jasnými lídry trhu s centralizovanou virtualizací společnosti Citrix a VMWare a to s obrovským tržním i technologickým náskokem. V grafu \ref{Forrester_Wave} je vidět také společnost Dell, která však již vlastní řešení dále nenabízí a prohlubuje spolupráci s produkty od VMWare, jelikož tuto společnost získala akvizicí jejího původního vlastníka, společnosti EMC, v září roku 2016. \todo{citace https://www.emc.com/about/news/press/2016/20160907-01.htm} 
+
+Průzkum trhu od společnosti IDC z roku 2016 \todo{citovat IDC VM} \ref{IDC_VM} má širší zaměření, a to na poskytovatele VCC (Virtual Client Computing). Ty definuje jako poskytovatele kteří tvoří a prodávají software pro virtualizaci se zaměřením na centralizované virtuální desktopy, distribuované virtuální desktopy a software pro virtuální uživatelské sezení (VUS). Průzkum je zaměřen především na obchodní úspěch hodnocených společností. Dále doporučuje zohlednit při výběru poskytovatele kvalitu systému pro správu zařízení, bezpečnost řešení, možnosti grafického výstupu a kompaktibilitu s užívanými aplikacemi. 
 
  \begin{figure}[h]\label{IDC_VM}
 \includegraphics[width=13cm]{img/IDC_VM}
-\caption{IDC MarketScape: Hodnocení dodavatelů klientů pro virtualizovaný software } 
+\caption{IDC MarketScape: Hodnocení dodavatelů VCC } 
 \label{EMM:quadrant}
 \centering
-\end{figure}\todo{citace http://campaign.vmware.com/imgs/GlobalCampaigns/39249/IDC_MarketScape_Worldwide_Virtual_Client_Computing_Software_2016_Vendor_Assessment.pdf}
+\end{figure}\todo{citace http://campaign.vmware.com/imgs/GlobalCampaigns/39249/IDC\_MarketScape\_Worldwide\_Virtual\_Client\_Computing\_Software\_2016\_Vendor\_Assessment.pdf}
+
+Podle tohoto průzkumu trhu s VCC jasně vládnou společnosti VMWare a Citrix. Nikdo další již nebyl zařazen do segmentu lídrů. Za zmínku dále stojí Microsoft, který má silnou pozici na trhu.
+
+
 
 \subsection{Citrix}
 Řešení XenDesktop se vyznačuje podporou vlastního protokolu HDX \todo{citace https://www.citrix.com/blogs/2014/08/18/citrix-xendesktopxenapp-what-is-hdx-its-not-just-ica/} díky kterému se snaží o adaptivní kompresi, de-duplikaci síťového provozu a přesměrování tíhy renderování dle okolností na klienta a to na všech podporovaných platformách. Dále podporuje vícenásobné 4k monitory a pokročilé funkce pro multimedia a videokonference. Výhodou je podpora amerického bezpečnostního standardu FIPS 140-2.
@@ -122,7 +128,34 @@ Podle \todo{citace forrestera} má XenDesktop výborné uživatelské hodnocení
 
 
 \subsection{VMWare}
-VMWare nabízí produkt VMWare Horizon View. Použitý protokol je PCoIP od firmy Teradici. Je vhodný v kombinaci serverem vSphere, kdy nabízí dobrou integraci. Nabízí též škálování do cloudu v kooperaci s řešením Horizon Air. Taktéž moduly software od VMWare splňují bezpečnostní standard FIPS 140-2. \todo{citace http://www.vmware.com/security/certifications/fips.html}. Horizon View je také možné zakoupit jako součást kompletního balíku, který obsahuje taktéž Horizon Flex pro offline použití. Podle \todo{zase ocitovat forrestera} hodnotí zákazníci produkt jako dobrý s několika problémy, jako například nutnost použití příkazové řádky pro některá nastavení.
+VMWare nabízí produkt VMWare \textbf{Horizon View}. Použitý protokol je PCoIP od firmy Teradici. Je vhodný v kombinaci serverem vSphere, kdy nabízí dobrou integraci. Nabízí též škálování do cloudu v kooperaci s řešením Horizon Air. Taktéž moduly software od VMWare splňují bezpečnostní standard FIPS 140-2. \todo{citace http://www.vmware.com/security/certifications/fips.html}. Horizon View je také možné zakoupit jako součást kompletního balíku, který obsahuje taktéž Horizon Flex pro offline použití. Podle \todo{zase ocitovat forrestera} hodnotí zákazníci produkt jako dobrý s několika problémy, jako například nutnost použití příkazové řádky pro některá nastavení.
+
+Další produkty pro virtualizaci pracovních prostředí jsou podle výrobce \todo{citace http://www.vmware.com/cz/products.html} následující:
+
+
+\textbf{Horizon 7} je platforma od VMWare pro virtuální desktopy a aplikace. \textit{Řešení Horizon 7 umožňuje zajišťovat, spravovat a chránit virtuální desktopy (VDI) a aplikace prostřednictvím jedné platformy.}
+
+\textbf{Horizon Air} je DaaS řešení od VMWare. \textit{Poskytuje virtuální desktopy a aplikace hostované v cloudu s širokou škálou možností včetně sdílených desktopů a aplikací.}
+
+\textbf{Horizon Flex} je řešení, které \textit{doručuje, spravuje a zabezpečuje místní virtuální desktopy se systémem Windows na počítačích Mac i PC a současně zajišťuje zabezpečení, možnosti řízení a dodržování požadavků.}
+
+\textbf{App Volumes} je \textit{portfolio integrovaných řešení pro správu aplikací a uživatelů pro virtuální prostředí řešení Horizon, Citrix XenApp a XenDesktop a RDSH.}
+
+\textbf{Mirage} \textit{nabízí správu bitových kopií desktopů pro fyzické desktopy a zařízení POS v nejrůznějších distribuovaných prostředích.}
+
+\textbf{NSX for Horizon} \textit{je síťové řešení infrastruktury virtuálních desktopů (VDI) se zásadami, které jsou dynamicky spojeny s desktopy.}
+
+\textbf{Virtual SAN for Horizon} \textit{Řešení VMware vSAN snižuje zákazníkům počáteční náklady a umožňuje jim využívat celou řadu předkonfigurovaných zařízení pro řešení Horizon, včetně zařízení Virtual SAN Ready Node a infrastruktury postavené na řešení EVO SDDC.}
+
+\textit{VMware \textbf{ThinApp} je řešení pro virtualizaci aplikací bez agentů, které izoluje aplikace od použitých operačních systémů a díky tomu eliminuje konflikty a zjednodušuje doručování a správu.}
+
+\textbf{Řešení User Environment Manager} \textit{nabízí podnikovou správu uživatelů vytvářející přizpůsobené prostředí pro koncové uživatele na všech zařízeních a místech.}
+
+\textbf{Produkty Fusion počítače Mac} \textit{Pomocí řešení VMware Fusion a VMware Fusion je možné používat na počítači Mac bez restartování systém Windows a stovky dalších operačních systémů.}
+
+\textbf{Produkty Workstation systém Windows} Řešení VMware Workstation a VMware Workstation Player představují oborový standard pro používání více operačních systémů jako virtuálních strojů na jednom počítači PC.
+
+\textbf{Řešení Workstation systém Linux} Produkty řešení VMware Workstation systém Linux představují oborový standard pro používání více operačních systémů jako virtuálních strojů na jednom počítači se systémem Linux.
 
 
 \subsection{Microsoft}
@@ -137,6 +170,11 @@ Oracle nabízí nástroj Secure Global Desktop, který je možné použít s rů
 
 %Navrhněte nasazení řešení BYOD. 
 \section{Návrh řešení}
+
+\todo{vybiram Flex - a proc? http://blogs.gartner.com/mark-lockwood/2014/10/14/is-vmwares-horizon-flex-the-answer-to-byod/}
+
+\todo{Nasazeni - Cisco guide}
+\todo{Nasazeni - Cisco Airwatch integration}
 
 
 %Zhodnoťte uskutečnitelnost řešení a analyzujte benefity a rizika spojená se zavedením navrženého konceptu.
