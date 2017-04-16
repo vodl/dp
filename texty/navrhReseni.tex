@@ -126,6 +126,12 @@ Podle tohoto průzkumu trhu s VCC jasně vládnou společnosti VMWare a Citrix. 
 Řešení XenDesktop se vyznačuje podporou vlastního protokolu HDX \todo{citace https://www.citrix.com/blogs/2014/08/18/citrix-xendesktopxenapp-what-is-hdx-its-not-just-ica/} díky kterému se snaží o adaptivní kompresi, de-duplikaci síťového provozu a přesměrování tíhy renderování dle okolností na klienta a to na všech podporovaných platformách. Dále podporuje vícenásobné 4k monitory a pokročilé funkce pro multimedia a videokonference. Výhodou je podpora amerického bezpečnostního standardu FIPS 140-2.
 Podle \todo{citace forrestera} má XenDesktop výborné uživatelské hodnocení, avšak technická podpora je pomalá.
 
+Oproti konkurenčnímu produktu od VMWare nabízí Citrix i virtualizaci Linuxových desktopů. Chlubí se třikrát rychlejším tiskem, šestkrát rychlejším spouštěním aplikací, pětkrát rychlejším ukládání souborů či podporou virtualizovaného Skype for Bussiness. Je možné jej nasadit na jakýkoliv cloud, jakýkoliv hypervizor, síť, do cloudu, lokálně či hybridně. \todo{ciace https://www.citrix.com/content/dam/citrix/en\_us/documents/products-solutions/why-choose-citrix-over-vmware-infographic.pdf a https://www.citrix.com/content/dam/citrix/en\_us/documents/white-paper/three-areas-where-citrix-xenapp-and-xendesktop-outperform-vmware-horizon.pdf}
+
+XenDesktop je možné provozovat také v cloudu. Zvolit lze libovolný hypervizor z nabídky VMWare ESX, Microsoft Hyper-V nebo Citrix XenServer. Pro offline použití existuje hypervizor typu 2 pro MacOS a Windows jménem DesktopPlayer. 
+
+Pro virtualizaci aplikací nabízí Citrix platformu XenApp.
+
 
 \subsection{VMWare}
 VMWare nabízí produkt VMWare \textbf{Horizon View}. Použitý protokol je PCoIP od firmy Teradici. Je vhodný v kombinaci serverem vSphere, kdy nabízí dobrou integraci. Nabízí též škálování do cloudu v kooperaci s řešením Horizon Air. Taktéž moduly software od VMWare splňují bezpečnostní standard FIPS 140-2. \todo{citace http://www.vmware.com/security/certifications/fips.html}. Horizon View je také možné zakoupit jako součást kompletního balíku, který obsahuje taktéž Horizon Flex pro offline použití. Podle \todo{zase ocitovat forrestera} hodnotí zákazníci produkt jako dobrý s několika problémy, jako například nutnost použití příkazové řádky pro některá nastavení.
@@ -157,19 +163,41 @@ Další produkty pro virtualizaci pracovních prostředí jsou podle výrobce \t
 
 \textbf{Řešení Workstation systém Linux} Produkty řešení VMware Workstation systém Linux představují oborový standard pro používání více operačních systémů jako virtuálních strojů na jednom počítači se systémem Linux.
 
+VMware tvrdí, že jeho řešení nabízí oproti konkurenčnímu Citrixu lepší správu a reporting nebo také centrální správu obrazů systémů ať už pro fyzické, virtuální nebo BYOD stroje. \todo{citace http://digital.leadmagz.com/ingrammicro/VMware/VMware_Why_Horizon_over_Citrix_Whitepaper.pdf}
+
 
 \subsection{Microsoft}
+Microsoft nabízí virtuální pracovní stanice skrze platformu Windows Server. Nenabízí sice DaaS řešeni, ale nabízí virtualizaci aplikací Microsoft Azure RemoteApp. Ty mohou fungovat buďto v čistě cloudovém nebo hybridním módu. VDI je provozováno pod značkou RDS (Remote Desktop Service) jako uživatelské sezení na Windows Server. Z toho důvodu nenabízí tolik možností nastavení a správy jako plná virtualizace. \todo{citace http://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/view/vmware-horizon-vs-microsoft-quick-look.pdf}
 
 \subsection{Oracle}
 Oracle nabízí nástroj Secure Global Desktop, který je možné použít s různými hypervizory, je ovšem optimalizovaný pro Oracle. Hlavní devízou řešení je kvalitní konzole pro správu Oracle Enterprise Manager. Podle \todo{zase cituj forestra} toto řešení není vhodné pro případy užití mimo prostředí s vysokým podílem aplikací od Oracle.
 
+Dále nabízí program VirtualBox. Jedná se o hypervizor typu 2, v základní verzi je zdarma i pro komerční užití. Je zaměřený spíše na vývojáře a nenabízí mnoho nástrojů pro vzdálenou správu. \todo{http://www.oracle.com/us/technologies/virtualization/oracle-vm-virtualbox-overview-2981353.pdf}
+
+\subsubsection{Amazon}
+
+Amazon nabízí DaaS službu Amazon workspaces. Je postavená na platformě Windows server 2008 a používá protokol PCoIP. Je možné volit z mnoha hardwarových konfigurací. Službul lze propojit s firemním Active directory. \todo{citace http://www.networkcomputing.com/storage/guide-vdi-evaluating-top-vendors/1908233543/page/0/5}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Konzultujte navrhované řešení se zástupci vybrané organizace a stanovte doporučení pro nasazení. 
 \section{Hodnocení navrhované varianty zástupci KB}
 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Navrhněte nasazení řešení BYOD. 
 \section{Návrh řešení}
+
+KB nehledá komlexní řešení pro virtualizaci pracovních stanic. Stávající situace, kdy zaměstnanci používají firemní zařízení je vyhovující a není důvod do ní jakkoli výrazněji zasahovat. Je však třeba najít odpověď na narůstající trend vlastních zařízení a především představit rámec pro kontraktory, kteří firemním zařízení nedisponují tak, aby nebyli rizikem pro vnitřní síť KB a jejich chování v rámci sítě bylo kontrolováno firemními politikami.
+
+\todo{Návaznost na kapitolu kde analizuju KB BYOD podle prezentace}
+
+Vzhledem k nároků kladeným na BYOD v KB vychází jako řešení nejlépe distribuovaná virtualizace. Pokročilou správu distribuovaných virtuálních strojů nutnou pro plnění firemních politik jak ze strany KB, tak i případně ze strany domovské firmy kontraktora 
+\section{Návrh řešení pro notebooky}
+
+\section{Návrh řešení pro mobilní zařízení}
 
 \todo{vybiram Flex - a proc? http://blogs.gartner.com/mark-lockwood/2014/10/14/is-vmwares-horizon-flex-the-answer-to-byod/}
 

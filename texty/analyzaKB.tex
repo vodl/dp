@@ -32,3 +32,106 @@ Aktuální bezpečnostní rizika jsou vysoká, jelikož dodržování bezpečnos
 \section{Analýza požadavků na připojení vlastních zařízení} \todo{Udělat seznam požadavků na BYOD}
 
 \section{Analýza hrozeb souvisejících s nasazením BYOD}
+
+\section{Analýza požadavků}
+Projekt na vyhodnocení konceptu BYOD byl v Komerční bance započat již v roce 2013. Byla snaha o vyhodnocení rámce pro konkrétní potřeby, scénáře a služby, dále měly být nastaveny předpokládané výstupy a definování možného dosažení řešení. Již v roce 2013 byl citelný příklon uživatelů ke konzumerizaci informačních technologií a prorůstání nonPC zařízení do firemního prostředí.
+
+Mobilní připojení k internetu se stalo standardem i pro běžné uživatele a ti tak byli neustále připojeni se svými osobními zařízeními k internetu. Dále byla citelná osobní potřeba zaměstnanců používat svá osobní zařízení i během pracovní doby. Byla nastolena možnost dát zaměstnancům možnost přístupu k emailu i z nefiremních zařízení, což by mohlo zvýšit pracovní efektivitu při minimálních dodatečných výdajích. Pro mnohé pracovní pozice by též zavedení BYOD programu mohlo umožnit flexibilnější pracovní styl. To se týká i snadnějšího přístupu ke klientům, a tedy umožnění pracovníkům z prodeje být blíže klientovi. Díky flexibilnějšímu přístupu by mohlo být možné lépe uplatňovat techniky křížného prodeje\footnote{Křížný prodej někdy též křížový prodej (anglicky cross-selling) je obchodní taktika navyšování prodeje, jejímž cílem je prodat více doporučením souvisejícího zboží nebo služeb.}.\todo{citace https://managementmania.com/cs/krizovy-prodej-cross-selling} Bezprostřední přístup k informacím by umožnil rychlejší reakci obchodníků a konkurenční výhodu. 
+
+Je třeba nalézt takové řešení, které bude zodpovědné z hlediska nákladů. Zároveň je potřeba, aby řešení mělo kladné přijetí od potencionálních uživatelů, tak aby byli ochotni jej využívat a náklady na zavedení nebyly vynaloženy zbytečně.  
+
+Je tedy možné rozlišit jak technologicko-sociální důvody k zavedení řešení pro BYOD tak také důvody businessové. Je zřejmé, že vzhledem k nastoleným trendům je nutné nastolit firemní strategii pro BYOD. Pokud by se řešení nenašlo, nefiremní zařízení se přesto budou rozšiřovat, ovšem nebudou pod kontrolou firemního IT oddělení. To v důsledku znamená, že není možné kontrolovat jak rizika tak náklady s tímto spojené. 
+
+
+\subsection{Identifikované potřeby businessu}
+\begin{itemize}
+    \item Tablety pro vrcholový management
+    \item Vlastní notebooky
+    \item Vlastní počítače Apple
+    \item Firemní notebooky externích konzultantů
+    \item Přístup k dokumentům ze soukromých tabletů
+    \item Přístup k emailu či kalendáři z osobního chytrého telefonu
+\end{itemize}
+
+\subsection{Identifikované služby}
+Z hlediska souvisejících služeb poskytovaných IT byly identifikovány služby typu \textbf{PIM}\footnote{Personal Information Management} neboli služby pro správu osobních informací, typicky se jedná o kalendář, email a další komunikační a organizační systémy. Prakticky se jedná o Oultook a Skype for Bussiness. Dále zprostředkovat služby pro \textbf{tvorbu a sdílení dokumentů}. Typicky se jedná o Microsoft Office či Atlassian Confluence. V neposlední řadě je nutný přístup k \textbf{business aplikacím}.
+
+\subsection{Identifikované typy zařízení}
+Co se týče různých typů zařízení, je třeba do BYOD programu zařadit firemní chytré telefony včetně zařízení BlackBerry a Tablety. Co se týče nefiremních či osobních zařízení je třeba zohlednit chytré telefony, tablety, notebooky či notebooky od firmy Apple.
+
+\subsection{Identifikovaní uživatelé}
+Jako uživatelé byli identifikování zaměstnancí KB, externí dodavatelé a kontraktoři a klienti.
+
+\subsection{Způsoby připojení k síti}
+Z hlediska připojení k síti byly identifikovány následující možnosti: připojení do sítě LAN, připojení do lokální WiFi a připojení skrze síť internet a mobilní připojení.
+
+\subsection{Způsob podpory od IT oddělení}
+Momentálně IT oddělení poskytuje end-to-end podporu. To znamená, že dodaní služeb je podporováno kompletně od zdroje, přes dodání po podporu koncových zařízení. Tento model není trvale udržitelný pro BYOD, kdy není možné podporovat všechna koncová zařízení a je tedy třeba zavést i model, kde je podporována pouze samotná služba.
+
+\subsection{Identifikace potřeb specifického uživatele -- vývojáře}
+Vývojáři patří mezi prioritní skupinu uživatelů, pro které je třeba připravit projekt BYOD. Je to především proto, že právě mezi vývojáři je velké množství kontraktorů, kteří si přinášejí své vlastní nefiremní zařízení. Vývojáři však májí vyšší požadavky než běžní uživatelé. Konzultací se zástupci vývojářů v Komerční bance bylz identifikovány následující potřeby. 
+
+Vývojář potřebuje mít na zařízení na kterém vyvíjí administrátorská oprávnění. Je to především z důvodu instalace pomocných nástrojů, tak z důvodu přístupu k některým systémovým funkcím operačního systému a to například pro potřeby testování. Dále má vývojář zvýšené nároky na výpočetní výkon stroje na kterém pracuje a to především z důvodu potřeby lokální kompilace zdrojových kódů. 
+
+Vývojáři mají specifické požadavky na nainstalované aplikace. Každý potřebuje vývojové prostředí (KB nemá sjednoceno a tedy vývojáři mohou volit nástroj dle svého uvážení, například IntelliJ Idea). Dále jsou to nástroje pro vývoj databází, například Oracle SQL Developer. Dále je nutné přistupovat k dalším databázím. V prostředí KB se používají různé databáze (Oracle, MySQL, MS SQL). Mezi dalšími nezbytnými nástroji byl uveden SSH klient Putty.
+
+Byla zmíněna potřeba přístupu k následujícím službám:
+\begin{itemize}
+    \item Přihlašování do domény
+    \item Přístup k logům -- k centrálnímu systému logů na systému Logman
+    \item Přístup k nástroji pro zpracování výstupních streamů Apache Kafka
+    \item Přístup k verzovacímu systém GIT na platformě BitBucket
+    \item Přístup k systému pro evidenci chyb Atlassian JIRA
+    \item Přístum k nástroji pro dokumentaci Atlassian Confluence
+    \item Přístup k nástroji pro automatizaci správy software Jenkins
+    \item Přístup k testovacím prostředí
+    \item Přístup k emailům 
+    \item Přístup ke službě Skype for business
+    \item Přístup k adresářové službě LDAP
+    \item Přístup ke správě identit ITIM
+\end{itemize}
+
+Pokud se vývojář připojuje vzdáleně, klade důraz na přístup k verzovacíu systému GIT, přístup k testovacímu prostředí a přístup k logům.
+
+\section{Aktuální stav podpory různých typů zařízení dle typu vlastnictví}
+\begin{table}[]
+\centering
+\caption{My caption}
+\label{my-label}
+\begin{tabular}{c|l|l|l|l}
+                          &          &\textbf{ KB zařízení }            & \textbf{Soukromé zařízení}           & \textbf{Zařízení kontraktora}                             \\ \hline
+\multirow{2}{*}{\textbf{Notebook}} & Lokálně  & Dostupné                & Nepodporované ale používané & \multicolumn{1}{l|}{Nepodporované ale používané} \\ \cline{2-5} 
+                          & Vzdáleně & Dostupné přes VPN       & Nepodporované               & \multicolumn{1}{l|}{Nepodporované}               \\ \hline
+\multirow{2}{*}{\textbf{Tablet}}   & Lokálně  & Nedostupné              & Nedostupné                  & \multicolumn{1}{l|}{Nedostupné}                  \\ \cline{2-5} 
+                          & Vzdáleně & Nedostupné              & Nedostupné                  & \multicolumn{1}{l|}{Nedostupné}                  \\ \hline
+\textbf{Chytrý telefon}            & Vzdáleně & Dostupné pro BlackBerry & Nedostupné                  & \multicolumn{1}{l|}{Nedostupné}                  \\ \cline{1-1}
+\end{tabular}
+\end{table}
+
+Nejvyšší prioritou je umožnit uživatelům se soukromými zařízeními plný a kontrolovaný přístup ke službám lokální sítě. Není nutné zajišťovat vzdálený přístup pro nefiremní zařízení, je však třeba podporovat vzdálený přístup k emailu.Pro mobilní telefony je třeba zajistit přístup k emailu, přístup k dokumentů a aplikacím zatím není vyžadován. Byl identifikován požadavek na firemní tablety od vrcholového managementu. Pro ty je třeba zajistit maximální přístup. Uživatelé soukromých tabletů požadují přístup k emailu a dokumentům.
+
+\section{Dříve zvažované možnosti pro email}
+V minulosti bylo zvažováno několik možností, jak zpřístupnit email a dokumenty na soukromých chytrých telefonech a tabletech.
+
+Exchange ActiveSync snižuje riziko krádeže díky vynucení zadání PIN kódu a možnosti vzdáleného smazání. V jeho prospěch hrála relativně snadná a rychlá implementace. Řešení bylo zamítnuto protože nenabízelo zašifrování dat, což ohrožení dat například při jail-breaku u zařízení iPhone.
+
+V rámci mateřské skupiny se používá řešení Good mail (nyní BlackBerry Work). Toto řešení nevyhovovalo požadavkům vzhledem k vysokým nákladům na implementaci a provoz. Odhad činil 30.000 EUR a 70 dnů lidské práce na přípravu infrastruktury a 152 EUR za licenci na uživatele na rok a dále 24EUR na uživatele a rok jako náklad na údržbu. Nicméně projekt pro toto řešení stále existuje.
+
+Microsoft Outlook Web App umožňuje prohlížení příloh přímo na serveru a není tedy nutné lokální šifrování dat. Řešení je vhodné jak pro mobilní zařízení, tak tablety a nepřináší žádné dodatečné náklady, jelikož je již implementováno. Uživatelé však nehodnotí uživatelskou přívětivost tohoto řešení příliš kladně.
+
+\section{Projekt VDI pro vývojáře a testery}
+
+V KB též existoval projekt, který se snažil zjisti možnost využití virtuálních strojů pro vývojáře a testery. Důvodem byla snaha získat řešení pro vlastní zařízení kontraktorů, které znamenají bezpečnostní riziko. Dále si KB od projektu slibovala nalezení řešení problému s využíváním několika zařízení vývojáři a to ať už z důvodů vzdálené podpory nebo zvláštních požadavků na výkon.
+
+Test VDI se odehrál 21.11.2011, probíhal tři týdny a zúčastnilo se jej 5 vývojářů. Uživatelé po dobu testu prováděli veškeré své pracovní úkony ve virtuálním prostředí. Virtuální stroje běželi na serveru Proliant DL380 G5 s parametry: 4x (2CPUx2jádra) CPU 3000MHz, 24GB RAM a 1,3TB místa na disku. Parametry pro jednotlivé virtuální stroje byly ekvivalentí k PC dvoujádrovým procesorem a 2-4 GB RAM.
+
+Účastníci testu ohodnotili uživatelský zážitek jako dostatečný pro běžné použití. Zaznamenali však nižší odezvu a občasné záseky. Byly identifikovány problémy s periferními zařízeními, například nefungovala čtečka na čipové karty. Odezva vývojářských nástrojů byla odhadem dvakrát pomalejší. Uživatelé hodnotili přechod k virtuálním strojům jako zhoršení uživatelského komfortu oproti fyzickým firemním PC. 
+
+Test prokázal vysoké nároky na diskové úložiště a to především co se týče počtu požadavků na vstupně/výstupní operace. To znamená nutnost vysoké investice do kvalitního diskového úložiště. Zároveň je nutné zajistit kvalitní konektivitu. Proto bylo rozhodnuto, že VDI není vhodné pro interní vývojáře, protože zvyšuje náklady a nepřináší benefity.
+
+Zároveň test doporučil ke zvážení zkoušený model VDI pro kontraktory a to pod podmínkou užití vlastního zařízení bez dalších nákladů pro KB, bez zajištění vysoké dostupnosti a omezení velikosti diskové kapacity pro virtuální stroje na ~70-80GB.
+
+
+
+
+
