@@ -163,7 +163,7 @@ Další produkty pro virtualizaci pracovních prostředí jsou podle výrobce \t
 
 \textbf{Řešení Workstation systém Linux} Produkty řešení VMware Workstation systém Linux představují oborový standard pro používání více operačních systémů jako virtuálních strojů na jednom počítači se systémem Linux.
 
-VMware tvrdí, že jeho řešení nabízí oproti konkurenčnímu Citrixu lepší správu a reporting nebo také centrální správu obrazů systémů ať už pro fyzické, virtuální nebo BYOD stroje. \todo{citace http://digital.leadmagz.com/ingrammicro/VMware/VMware_Why_Horizon_over_Citrix_Whitepaper.pdf}
+VMware tvrdí, že jeho řešení nabízí oproti konkurenčnímu Citrixu lepší správu a reporting nebo také centrální správu obrazů systémů ať už pro fyzické, virtuální nebo BYOD stroje. \todo{citace http://digital.leadmagz.com/ingrammicro/VMware/VMware\_Why\_Horizon\_over\_Citrix\_Whitepaper.pdf}
 
 
 \subsection{Microsoft}
@@ -181,7 +181,7 @@ Amazon nabízí DaaS službu Amazon workspaces. Je postavená na platformě Wind
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Konzultujte navrhované řešení se zástupci vybrané organizace a stanovte doporučení pro nasazení. 
-\section{Hodnocení navrhované varianty zástupci KB}
+\section{Hodnocení navrhované varianty zástupci KB}\todo{sehnat}
 
 
 
@@ -194,12 +194,52 @@ KB nehledá komlexní řešení pro virtualizaci pracovních stanic. Stávajíc�
 
 \todo{Návaznost na kapitolu kde analizuju KB BYOD podle prezentace}
 
-Vzhledem k nároků kladeným na BYOD v KB vychází jako řešení nejlépe distribuovaná virtualizace. Pokročilou správu distribuovaných virtuálních strojů nutnou pro plnění firemních politik jak ze strany KB, tak i případně ze strany domovské firmy kontraktora 
+Vzhledem k nároků kladeným na BYOD v KB vychází jako řešení nejlépe distribuovaná virtualizace. Navržené řešení umožňuje pokročilou správu distribuovaných virtuálních strojů nutnou pro plnění firemních politik jak ze strany KB, tak i případně ze strany domovské firmy kontraktora.
+
 \section{Návrh řešení pro notebooky}
 
-\section{Návrh řešení pro mobilní zařízení}
+V roce 2014 VMWare představil VMWare řešení VMWare Horizon Flex. Jedná se o kombinaci některých stávajících technologií jako jsou Fusion, Player, Mirage či AirWatch. \todo{citace http://blogs.gartner.com/mark-lockwood/2014/10/14/is-vmwares-horizon-flex-the-answer-to-byod/}. Je odpovědí na požadavky zákazníku provozovat virtuální desktopy offline. Zároveň přináší výhody virtualizace, ale nenese s sebou velké náklady v podobě nutnosti výkonných serverů a dostatečného diskového úložiště jako v případě centralizované virtualizice, což byl jeden s hlavních důvodů, proč centralizovaná virtualizace v KB není rozšířena jako alternativa pro řešení BYOD, viz (\ref{projektVDI}). Nevýhoda virtualizace v podobě vysokých nároků na konektivitu a špatné odezvy je u tohoto řešení taktéž neexistující. 
 
-\todo{vybiram Flex - a proc? http://blogs.gartner.com/mark-lockwood/2014/10/14/is-vmwares-horizon-flex-the-answer-to-byod/}
+Uživatelé mohou přistupovat do korporátní sítě z korporátního obrazu operačního systému, ale přitom použivat své vlastní notebooky nebo počítače od firmy Apple, bez toho aby tyto zařízení muselo IT oddělení podporovat. IT může plně spravovat korporátní systém bez toho, aby zasahovalo do operačního systému uživatele. Bezpečnostní rizika jsou minimalizována díky oddělení obou operačních systémů a možnosti vzdáleně řídit omezení pro virtuální stoj, či ho dokonce vzdáleně uzamknout či smazat. Tato možnost je obzvláště výhodné u externích pracovníků, kterým může vypršet kontrakt. Do systému Horizon FLEX je možné zapojit také obrazy virtuálních strojů sloužící pro testování a lépe je tak spravovat.
+
+Technicky se jedná o hypervizor typu 2, který je spravovaný centrálně. Je možné jej nasadit jak pro koncové stanice s Mac OS, tak s Windows. Spravovat, zálohovat a záplatovat systém je též možné centrálně, a to s užitím serveru Mirage for Horizon FLEX. Pro nastavení politik řešení obsahuje Horizon FLEX Policy Server, jako klient je použit VMware Fusion Pro pro počítače Mac a VMware Workstation Player pro počítače s Windows.  \todo{citovat http://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/techpaper/vmware-horizon-flex-solution-brief-mirage-fusion-player.pdf} Pro klienta jsou podporovány následující 64bitové operační systémy: Windows 7, Windows 8.1, Windows 10, Mac OS X 10.9, Mac OS X 10.10 a Mac OS X 10.11.
+
+ \begin{figure}[h!]\label{FlexVrstvy}
+\includegraphics[width=10cm]{img/FlexVrstvy}
+\caption{Vrstvy produktu VMWare Horizon FLEX} 
+\label{FlexVrstvy}
+\centering
+\end{figure}\todo{citovat http://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/techpaper/vmware-horizon-flex-solution-brief-mirage-fusion-player.pdf}
+
+
+
+Různě nastavené virtuální stroje je možné distribuovat různým uživatelům. Uživateli musí být nejdříve nainstalován klient a tedy Fusion Pro nebo Workstation Player. Uživatelský systém potřebuje přístup k Horizon FLEX Policy serveru v následujících případech: pro úvodní stažení obrazu stroje a pro získání aktualizací politik a omezení. Horizon Flex Policy Server musí být pro klienta dostupný pomocí https protocol. Je možné nastavit maximální počet dní bez připojení k Policy Serveru. Minimimální hardwarové požadavky serverů jsou sepsány v příloze (\ref{pozadavky})
+
+
+ \begin{figure}[h!]\label{FlexPolicy}
+\includegraphics[width=10cm]{img/FlexPolicy}
+\caption{Schéma pro připojení k Horizon Flex Policy serveru}
+\centering
+\end{figure}\todo{citovat http://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/techpaper/vmware-horizon-flex-solution-brief-mirage-fusion-player.pdf} 
+
+
+S užitím Policy serveru mohou adminstrátoři mimo jiné spravovat inventář omezených virtuálních strojů, procházet seznam uživatelů a skupin ve službě Active Directory, přiřazovat uživatele a skupiny k jednomu či více virtuálnímu stroji, specifikovat politiky pro dané přiřazení, omezit uživateli přístup k virtuálnímu stroji vzdáleným zamknutím nebo kontrolovat stav virtuálního stroje.
+
+Pro nastavování politik slouží webové uživatelské rozhraní. Je možné nastavit následující omezení:
+
+\begin{itemize}
+    \item Expirační doba -- Doba, po kterou je virtuální stroj přístupný.
+    \item Použití USB zařízení -- Blokování použití zvolených USB zařízení.
+    \item Copy\&Paste operace -- Omezení funkce copy and paste mezi hostitelským a virtualizovaným operačním systémem.
+    \item Drag\&Drop operace -- Omezení drag and drop funkcionality mezi hostitelským a virtualizovaným operačním systémem.
+    \item Zadaní hesla pro kopírování či přesouvání virtuálního stroje.
+    \item Omezení existujících instancí virtuálního stroje na jednu.
+    \item Omezení možnosti přidělování hardwarových prostředků pro virtuální stroj.
+\end{itemize}
+
+Virtuální stroj je též možné vzdáleně uzamknout a nebo smazat.
+
+\section{Návrh řešení pro mobilní zařízení}
 
 \todo{Nasazeni - Cisco guide}
 \todo{Nasazeni - Cisco Airwatch integration}

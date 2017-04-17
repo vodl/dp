@@ -3,26 +3,24 @@
 
 \section{Aktuální stav připojování soukromých zařízení}\todo{Učesat a zformulovat}
 
-Is.kb.cz je informační systém. Obsahuje service desk pro přidávání zařízení. Toto je outsourcováno na firmu HP. Firma Alef naimplementovala MAPkeeper. Jedná se o service manager. Je to nadstavba nad systémem Cisco AnyConnect ISE.
+Komerční banka používá vnitřní informační systém is.kb.cz. Jeho součástí je i service desk pro přidávání uživatelů. Správa servicedesku je outsourcována na firmu HP. Pro připojení vlastního zařízení do sítě KB je nutné zadat do systému výjímku. Pracovní postup pro přidání výjimky je následující: přidá se požadavek, dále probíhá schvalování, požadavek je vyhodnocen IT security a po schválení je zadání výjimky outsourcováno na externí firmu (HP). 
 
 
-Schéma přidání výjimky je následující: přidá se požadavek, dále probíhá schvalování, požadavek je vyhodnocen IT security a po schválení je zadání výjimky outsourcováno na externí firmu (HP).
-
-Systém ISE řídí nasměrování zařízení do VLAN. ISE je program od cisca. Information security engine. Řídí práva zařízení. Je to high level - na úrovni topologie sítě. Vyjímky jsou je možné najít v MAPkeeperu pod Approved devices. MapKeeper slouží pro distribuci správy. Používá se Mac address bypass i další metody co mohou selhat. Pokud dojde při ověření MAC adresy k chybě, použije se  802.1.X  Podle MAC adresy se určuje správná VLAN.
-
-Jelikož BYOD nemají autorizační certifikát, používá se autorizační funkce. Uživatel s vlastním zařízením s uznanou výjímkou se připojuje do stejné VLAN jako KB zařízení.
+Pro správu zařízení KB používá nástroj MAB Keeper od firmy AleFIT. Ta jej definuje jako: \textit{Aplikace slouží ke správě MAC adres zařízení, která jsou v autentizačním systému použita pro autentizaci, ale nejsou kompatibilní se standardem 802.1x, nebo správě zařízení, u nichž se MAC adresa využívá jako náhradní způsob autentizace. AleFIT MAB Keeper také umožňuje díky několika modulům kontrolovat a časově omezit přístup kontraktorů, konzultantů i BYOD zařízení do firemní sítě, stejně jako využít workflow pro realizaci re-image stanic.} \todo{citace https://www.alef.com/alefnula/alefit-mab-keeper-a-alefit-office-locator.c-269.html} Je to vlastně nadstavba nad systémem Cisco Identity Service Engine (ISE).
 
 
-Pro připojení do sítě se používají CISCO ISE a VPNky. Dochází k různým kontrolám.
-Další kontroly umožňuje cisco ISE plus, kdy na jednoho uživatele je zapotřebí jedna licence. KB momentálně vlastní balík 500 licencí. Cena byla zhruba pul milionu korun. Bude docházet k výměně zařízení ASA. Licence budou převedeny.
+Systém ISE řídí nasměrování zařízení do patřičné VLAN na základě adresy MAC. Díky tomu řídí práva zařízení. Jedná se tedy o správu připojených zařízení na úrovni topologie sítě. Výjimky je možné najít v MAPkeeperu pod Approved devices. MapKeeper slouží pro distribuci správy. Používá se Mac address bypass i další metody co mohou selhat. Pokud dojde při ověření MAC adresy k chybě, použije se  802.1.X  
 
 
-NACS - dochází k problému, kdy při změně zásuvky, může být uživateli přidělena jiná VLAN.
+Jelikož nefiremní zařízení nemají autorizační certifikát, používá se autorizační funkce. Uživatel s vlastním zařízením s uznanou výjimkou se připojuje do stejné VLAN jako KB zařízení. \todo{a to je fail}
 
 
-WIFI - co se týče admin sítí, přístup je možný pouze přes terminál. Jedná se o standardní datovou síť. Není vůle rozšiřovat možnosti wifi. Pro přístup je třeba machine certifikát. Důvodem je dostupnost sítě také přes zeď.
+Pro připojení do sítě se používají CISCO ISE a VPN. Dochází k různým kontrolám. Pokročilejší kontroly umožňuje cisco ISE plus, kdy na jednoho uživatele je zapotřebí jedna licence. KB momentálně vlastní balík 500 licencí. Cena byla zhruba pul milionu korun. Bude docházet k výměně zařízení ASA a licence budou převedeny. Při použití principů NAC (Network Access Control) dochází k problému, kdy při změně zásuvky, může být uživateli přidělena jiná VLAN než je uživateli běžně přidělována při použití zásuvky na jeho obvyklém pracovním místě.
 
-Dále existuje guest wifi pro přístup na internet. Probíhá na ní URL filtrace.
+
+Z hlediska použití bezdrátových sítí WIFI existují admin sítě, ke kterým je možné přistupovat pouze přes terminál \todo{WTF}. Jedná se o standardní datovou síť. Pro přístup je nutný certifikát, a to především z důvodu fyzické dostupnosti signálu sítě i mimo objekty KB. Není v plánu další rozšiřování datových WIFI sítí.  
+
+Dále existuje WIFI síť pro hosty pouze s přístupem na internet. Probíhá na ní URL filtrace.
 
 
 \section{Analýza aktuálních bezpečnostních rizik}
@@ -94,19 +92,7 @@ Byla zmíněna potřeba přístupu k následujícím službám:
 Pokud se vývojář připojuje vzdáleně, klade důraz na přístup k verzovacíu systému GIT, přístup k testovacímu prostředí a přístup k logům.
 
 \section{Aktuální stav podpory různých typů zařízení dle typu vlastnictví}
-\begin{table}[]
-\centering
-\caption{My caption}
-\label{my-label}
-\begin{tabular}{c|l|l|l|l}
-                          &          &\textbf{ KB zařízení }            & \textbf{Soukromé zařízení}           & \textbf{Zařízení kontraktora}                             \\ \hline
-\multirow{2}{*}{\textbf{Notebook}} & Lokálně  & Dostupné                & Nepodporované ale používané & \multicolumn{1}{l|}{Nepodporované ale používané} \\ \cline{2-5} 
-                          & Vzdáleně & Dostupné přes VPN       & Nepodporované               & \multicolumn{1}{l|}{Nepodporované}               \\ \hline
-\multirow{2}{*}{\textbf{Tablet}}   & Lokálně  & Nedostupné              & Nedostupné                  & \multicolumn{1}{l|}{Nedostupné}                  \\ \cline{2-5} 
-                          & Vzdáleně & Nedostupné              & Nedostupné                  & \multicolumn{1}{l|}{Nedostupné}                  \\ \hline
-\textbf{Chytrý telefon}            & Vzdáleně & Dostupné pro BlackBerry & Nedostupné                  & \multicolumn{1}{l|}{Nedostupné}                  \\ \cline{1-1}
-\end{tabular}
-\end{table}
+
 
 Nejvyšší prioritou je umožnit uživatelům se soukromými zařízeními plný a kontrolovaný přístup ke službám lokální sítě. Není nutné zajišťovat vzdálený přístup pro nefiremní zařízení, je však třeba podporovat vzdálený přístup k emailu.Pro mobilní telefony je třeba zajistit přístup k emailu, přístup k dokumentů a aplikacím zatím není vyžadován. Byl identifikován požadavek na firemní tablety od vrcholového managementu. Pro ty je třeba zajistit maximální přístup. Uživatelé soukromých tabletů požadují přístup k emailu a dokumentům.
 
@@ -119,7 +105,7 @@ V rámci mateřské skupiny se používá řešení Good mail (nyní BlackBerry 
 
 Microsoft Outlook Web App umožňuje prohlížení příloh přímo na serveru a není tedy nutné lokální šifrování dat. Řešení je vhodné jak pro mobilní zařízení, tak tablety a nepřináší žádné dodatečné náklady, jelikož je již implementováno. Uživatelé však nehodnotí uživatelskou přívětivost tohoto řešení příliš kladně.
 
-\section{Projekt VDI pro vývojáře a testery}
+\section{Projekt VDI pro vývojáře a testery}\label{projektVDI}
 
 V KB též existoval projekt, který se snažil zjisti možnost využití virtuálních strojů pro vývojáře a testery. Důvodem byla snaha získat řešení pro vlastní zařízení kontraktorů, které znamenají bezpečnostní riziko. Dále si KB od projektu slibovala nalezení řešení problému s využíváním několika zařízení vývojáři a to ať už z důvodů vzdálené podpory nebo zvláštních požadavků na výkon.
 
