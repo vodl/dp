@@ -74,6 +74,10 @@ Celosvětově je zřejmá rostoucí obliba mobilních zařízení mezi uživatel
 \end{figure}\todo{citace}
  
 Od těchto zařízení se nepředpokládá nutnost přístupu k podnikovým aplikacím, ale je vyžadován okamžitý přístup k emailům, kontaktům či dokumentům a to nezávisle na místě použití.
+
+Report od společnosti Nokia Thread Intelligence Lab \todo{citovat http://resources.alcatel-lucent.com/asset/193174  http://www.nokia.com/en\_int/news/releases/2016/03/01/nokia-malware-report-shows-smartphones-now-account-for-60-of-infections-in-the-mobile-network}, který zmonitoroval aktivitu malware v sítích mobilních operátorů mezi lety 2012 a 2015 měly 60 \% veškeré aktivity malware v mobilních sítích na svědomí chytré telefony, zbytek šel na vrub Windows PC.
+
+V prosinci 2015 vykazovalo známky napadení škodlivým software 0,3 \% všech chytých telefonů. Nejvíce napadení zaznamenali zařízení s operačním systémem Android, ovšem na seznam s dvaceti nejčastěji se vyskytujícími druhy školivého software so dostali i dva zástupci pro operašní systém iOS (XcodeGhost a Flexispy). V říjnu 2015 bylo 6 \% všech napadených zařízení značky iPhone.
  
  
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -120,7 +124,19 @@ Od těchto zařízení se nepředpokládá nutnost přístupu k podnikovým apli
  \todo{doplnit povidacky}
  
  \subsection{Rozlišení na úrovni sítě}
- Cisco ISE plus a jiné. \todo{Dostudovat a doplnit síťové BYOD}
+ Použitím Network Access Controll neboli NAC je možné spravovat přístup zařízení do sítě. Je možné nastavit autentifikační kontroly a další bezpečnostní politiky, které musí zařízení splňovat aby bylo do sítě vpuštěno. 
+ 
+ Společnost Gartner identifikuje několik funkcí, které tato řešení nabízejí. \todo{citace https://www.gartner.com/doc/reprints?id=1-3I8W2V2\&ct=160922\&st=sb}
+ Politiky mohou pojmout různé fukce jako například autentifikaci zařízení, autorizaci uživatele, lokaci, čas či přístup k aplikacím a zdrojům.
+ 
+ Dále je možné posoudit stav zařízení z hlediska aktuálnosti systému a antivirových definic co se týče zařízení s Windows, nebo přítomnost EMM, viz \ref{EMM},  na mobilních zařízení.
+ 
+ Přístup je přidělován pomocí síťové infrastruktury s použitím 802.1X protokolu, virtuálních LAN, či seznamů pro řízení přístupů neboli ACL (Access Control List).
+ 
+ Dalšími službami poskytovanými NAC řešeními může být vytváření sítí pro hosty, monitoring připojených zařízení či integrace s dalšími bezpečnostními prvky.
+ 
+ 
+Gartner ve své studii zmiňuje následující prudukty: Aruba ClearPass, Auconet BICS, Brandford Networks Network Sentry, Cisco ISE, Extreme Networks ExtremeControll, ForeScout CounterACT, Impulse Point SafeConnect, Info Express CGX, Portnox CLEAR, Pulse Policy Secure, SnoopWall Netshield.
  
  
  \subsubsection{Virtualizace aplikaci}
@@ -131,7 +147,7 @@ Od těchto zařízení se nepředpokládá nutnost přístupu k podnikovým apli
   Nejznámějšími poskytovateli virtualizace aplikací jsou Citrix XenApp, Citrix XenDesktop, VMware Horizon, Dell vWorkspace, and Microsoft RDSH\todo{překlad}
  
  
- \subsubsection{EMM/EMS}
+ \subsubsection{EMM/EMS}\label{EMM}
  Enterprise mobility management nebo též Enterprise Mobility suite umožňují integrovat a spravovat mobilní zařízení v rámci firemní infrastruktury.
  Dle agentury Gartner jsou EMM balíky lepidlem, které připojuje mobilní zařízení do firemní infrastruktury. \cite{Gartner_EMM_2016}
  
@@ -143,7 +159,14 @@ Od těchto zařízení se nepředpokládá nutnost přístupu k podnikovým apli
      \item umožňují vzdálenou podporu zařízení pro IT oddělení
  \end{itemize}
  
+Výzkum společnosti J Gold Associates z roku 2016 \todo{citace http://jgoldassociates.com/Technology\_Brief/Technology\_Brief\_April\_2016.pdf} ukazuje, že firmy v drtivé většině nenasazují všechny funkce, které EMM řešení nabízejí. Nejpoužívanější funkce EMM jsou vypsány na obrázku (\ref{funkceEMM}) 
 
+\begin{figure}[h!]
+\centering
+\includegraphics[width=13cm]{img/funkceEMM}
+\caption{Které komponenty EMM řešení organizace zapojené do průzkumu aktuáně používají? } 
+\end{figure}\label{funkceEMM}
+\todo{citace http://jgoldassociates.com/Technology\_Brief/Technology\_Brief\_April\_2016.pdf}
  
  
  
@@ -182,10 +205,10 @@ Od těchto zařízení se nepředpokládá nutnost přístupu k podnikovým apli
  
   
 \begin{figure}[h]
+\centering
 \includegraphics[width=7cm]{img/MAM-Offering}
 \caption{Gartner Magic quadrant. Převzato z } 
 \label{MAM:nacrt}
-\centering
 \end{figure}\todo{ citace https://www.ibm.com/developerworks/community/blogs/mobileblog/entry/got\_mam\_mobile\_application\_management\_in\_your\_2013\_mobile\_menu25?lang=en}
 
 

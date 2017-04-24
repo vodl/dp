@@ -1,183 +1,12 @@
-%Vyberte nejvhodnější variantu na trhu dostupného řešení a konfrontujte ji s praxí ve vybrané organizaci. 
-\section{Výběr nejvhodnější varianty}
 
-Předchozí analýzy prokázaly, že neexistuje řešení, které by dokázalo zastřešit všechny případy užití vlastních zařízení ve firemním prostředí. Proto tato práce bude dále dělit BYOD podle typu zařízení a to na mobilní zařízení jako jsou mobilní telefony či tablety a notebooky.
 
-\section{Výběr řešení pro mobilní telefony a tablety}
 
-\todo{Proc je potreba EMM? Viz specifikace projektu Good}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Navrhněte nasazení řešení BYOD. 
+\section{Návrh řešení}
 
-Trh nástroji v posledních letech výrazně rostl, zároveň se však konsilidoval. \todo{citace https://theictscoop.com/airwatch-consolidates-emm-leadership-in-latest-idc-report-6622602febde   } V grafech \ref{EMM:podil2015} a \ref{EMM:podil2016} je vidět nárůst trhu s EMM mezi lety 2014 a 2015 z 1,4 miliardy dolarů na 1,8 miliardy dolarů, tedy o 26,9 \%. Zároveň je vidět zvyšování tržního podílu velkých hráču. Výrazný vliv měla také akvice společosti Good Technology společností BlackBerry.
 
- 
-  \begin{figure}[h]
-\includegraphics[width=13cm]{img/IDC_EMM}
-\caption{Podíl na trhu jednotlivých poskytovatelů EMM v roce 2014 podle IDC Převzato z \cite{}} 
-\label{EMM:podil2015}
-\centering
-\end{figure}\todo{citace http://www.idc.com/getdoc.jsp?containerId=US40430516  }
-
-  \begin{figure}[h]
-\includegraphics[width=13cm]{img/IDC_EMM_2016}
-\caption{Podíl na trhu jednotlivých poskytovatelů EMM v roce 2015 podle IDC Převzato z \cite{}} 
-\label{EMM:podil2016}
-\centering
-\end{figure}\todo{citace https://theictscoop.com/airwatch-consolidates-emm-leadership-in-latest-idc-report-6622602febde   }
-
-Podle magazínu CIOReview bylo v roce 2016 pro BYOD nejslibnějších následujících dvacet poskytovatelů software: Accelion, API Systems, Cyber adAPT, Ericom Software, Excelerate Systems, GSG Telco, High Point Solutions, LANDESK Software,  Mathe, MobileIron, MobilityLab, Movius, RES Software, Sirama Consulting, Skycure, Storgrid, Tangoe, Tyfone, VmWare AirWatch, Zix Corporation.
-
-Některé z nich jsou však příliš úzce zaměřené, či jsou pouze minoritními hráči na trhu. Analýza společnosti Gartner \cite{Gartner_EMM_2016} z roku 2016 pro EMM rozděluje jednotlivé poskytovatele dle jejich postavení na trhu a zároveň zohledňuje jejich schopnost zohlednit v produktu aktuální požadavky trhu a nasměrování produktu k budoucím potřebám zákazníků. Tyto kritéria shrnuje společnost Gartner jako osy "schopnost vykonat" a "úplnost vize" ve svém grafu nazývaném magic quadrant. \ref{EMM:quadrant}
-
-
-
- \begin{figure}[h]
-\includegraphics[width=13cm]{img/Gartner_EMM}
-\caption{Gartner Magic quadrant. Převzato z \cite{Gartner_EMM_2016}} 
-\label{EMM:quadrant}
-\centering
-\end{figure}\todo{citace}
- %\missingfigure{magic quarter}
- 
-Následující společnosti se nacházejí v kvadrantu lídrů:
-
-
-\subsubsection{VMWare Airwatch}
-VMWare koupil společnost AirWatch v roce 2014 \todo{citace http://ir.vmware.com/overview/press-releases/press-release-details/2014/VMware-Completes-Acquisition-of-AirWatch/default.aspx}. Od té doby VMWare zařadil tento EMM do svého porfolia a postupně jej integruje s dalšími produkty jakou jsou jeho nástroje pro IAM (Identity and Access Management) a SDN (software-defined networking). AirWatch nabízí širokou podporu pro nástroje třetích stran a je jeden ze zakládajících členů standardu AppConfig. VMWare AirWatch je vhodný pro společnosti, které hledají rozsáhlou funkcionalitu s podporou mnoha platforem.
-
-Podle \todo{citace} byla prokázána nasaditelnost do rozsáhlých prostředí a snadná administrace. Na druhou stranu se objevily problémy s technickou podporou a také nutnost použít řešení od třetí strany pro PIM (Person information management).
-
-
-
-\subsubsection{MobileIron}
-MobileIron je veřejně obchodovatelná společnost (NASDAQ: MOBL), která jako jedna z posledních soustředí pouze na svůj EMM produkt. Nabízí však širokou podporu aplikací třetích stran a je jedním ze zakládajících členů standardu AppConfig. Společnost je ceněna za schopnost přinášet nové funkce na všechny tři hlavní mobilní platformy a plnění amerických bezpečnostních certifikací. Jedná se o produkt, který nabízí mnoho funkcí, , škálovatelnost, stabilitu a integraci s dalšími aplikacemi.
-
-Řešení nabízí vytváření nástroj pro reporting, pokročilou integraci se SIEM (security information and event management) řešeními třetích stran či správu z mobilního zařízení. Získává kladné ohlasy na svou stabilitu, použitelnost, škálovatelnost a rozsáhlý ekosystém přidružených aplikací AppConnect. MobileIron se drží mezi prvními při nasazování pro nové verze operačních systému.
-
-Na druhou stranu podle \todo{citace} jsou známé případy, kdy zákazníci měli obtíže získat technickou podporu, aplikace Apps@Work nabízejí zastaralý uživatelský zážitek a zároveň existuje nejistota ohledně budoucnosti firmy vzhledem ke změnám ve vrcholém managementu.
-
-\subsubsection{Citrix}
-Řešení od společnosti Citrix se skládá z produktů NetScaler, ShareFile a Xen Mobile. Je silné především díky balíku kontejnerizovaných aplikací Worx. ShareFile je kvalitní EFSS (Enterprise file synchronization and sharing) řešení. Obsahuje též uživatelsky přívětivé DLP (Data loss prevention).XenMobile je vhodný pro společnosti s existující infrastrukturou od Citrixu nebo pro ty co požadují široké spektrum funkcí.
-
-Společnost Gartner zaznamenala probléby u nasazení XenMobile jako SaaS (Software as a service) u velkých projektů (tj. více než 20000 zařízení). Přestože XenMobile nabízí možnost virtualizace Windows aplikací pro mobilní zařízení, použitelnost je na na mobilních zařízeních sporná, vzhledem k dotykové povaze ovládání uživatelského rozhraní. 
-
-
-\subsubsection{IBM}
-IBM nabízí komletní malík EMM nástrojů MaaS360. Podporuje všechny významné operační systémy, nabízí dobrou spolupráci s dalším bezpečnostním software od IBM. Jedná se o produkt, který má velký záběr co se týče funkcionality, ale přitom je snadno nasaditelný.
-
-
-
-\subsubsection{BlackBerry}
-BlackBerry nyní prodává svůj nástroj jako Good Secure EMM Suite. Skládá se z BES12, Good collaboration apps, Good dynamics a WatchDox Enterprise. Produkty pod značkou Good a WatchDox získala Blacberry akvizicemi které byly dokončeny v roce 2015. \todo{citace http://global.blackberry.com/en/company/newsroom/press?id=1998017} \todo{http://global.blackberry.com/en/company/newsroom/press?id=1946553}
-
-Podle agentury Gartner je Good Secure EMM Suite vhodný pro organizace s přísnými požadavky na bezpečnost či působící v regulovaném sektoru. Těm nabízí silnou sadu nástrojů pro ochranu. Zároveň existuje silná podpora pro starší verze software od BlackBerry. Nástroj Good Work nabízí jeden z nejlepších zabezbečených Personal information manager (PIM) nástrojů. Podpora od BlackBerry získává mnoho kladných hodnocení od zákazníků. 
-
-Vícevrstvá cloudová verze produktu BES12 umisťuje data do datacenter ve dvou lokacích a to Kanady a Nizozemí. To by mohl být pro některé bezpečnostní politiky problém. Zároveň u balíku od společnosti BlackBerry dochází k roztříštěnosti služeb mezi jednotlivými produkty.
-
-\todo{funkce a tak}
-
-Další řešení:
-
-\subsubsection{Cisco}
-Cisco se dostalo mezi společnosti nabízející MDM software akvizicí společnosti Meraki v roce 2012 \todo{citace https://newsroom.cisco.com/press-release-content?articleId=1118649}. Kromě řešení pro Android a iOS nabízí také podporu pro Windows a MAC OS X. Nabízí hlubokou integraci do síťové ingrastruktury. Správa produktu nabízí velice jednoduché a přívětivé uživatelské rozhraní. Cenově se jedná o levnější řešení než většina konkurence.
-
-Výhody integrace do síťové infrastruktury je možné využít pouze v případě, že organizace používá sítovou infrastrukturu od Cisco/Meraki. Meraki neobsahuje všechny součásti EMM, soutředí se pouze na MDM.
-
-
-
-\subsubsection{Microsoft}
-EMM produkt od Microsoftu se nazývá Enterprise Mobility Suite. Skládá se z Microsoft Intune, Azure Active Directory Premium, Advanced Threat Analytics a Azure Rights Management. MDM a MAM služby jsou soustředěny v Microsoft Intune. Toto řešení je nabízeno pouze služba v cloudu. Řešení od Microsoftu je vhodné pro společnosti, které nemají vysoké nároky na správu a používají Office 365 nebo Azure Active Directory.
-
-\subsubsection{Landesk}
-Landesk se zaměřuje především na UEM (User Evironment Management) a jeho řešení Landesk Mobility Suite tak zapadá do jeho portfolia jako doplněk pro mobilní zařízení. Je tedy vhodné především pro firmy, které mají potřebu spravovat desktopové prostředí a mobilní zařízení zároveň.
-
-\subsubsection{Další řešení}
-Ostatní řešení byla v \todo{citace} byla prezentována jako mající příliš úzké zaměření, nedostatečnou funkcionalitu nebo nevhodnost pro nasazení ve větším měřítku
-
-
-\section{Výběr řešení pro notebooky}
-
-Vzhledem k požadavkům na bezpečnost a dodržování přísných firemních politik v bance a zároveň k potřebě přístupů k různým typům software a aplikací se zdá jako jediné vhodné řešení BYOD virtualizace desktopu. Způsobů, jakými může virtualizace sloužit pro řešení BYOD je více.
-
-Analýza \ref{Forreste_Wave} z září roku 2015 od společnosti Forrester se zaměřuje na virtuální desktopy umístěné na vlastním serveru. Výhodou oproti DaaS řešení je, že aplikace i data jsou pod úplnou kontrolou IT oddělení, což snižuje riziko ztráty nebo krádeže dat. Nevýhodou těchto řešení může být problémová funkčnost některých periferních zařízení, jako jsou webové kamery nebo tiskárny. Dále jsou tato řešení velmi citlivá na stabilitu a rychlost internetového připojení a to především u graficky náročnějších aplikací. 
-
- \begin{figure}[h]\label{Forrester_Wave}
-\includegraphics[width=13cm]{img/Forrester_Wave}
-\caption{The Forrester Wave: Virtuání desktopy umístěné na serveru} 
-\label{EMM:quadrant}
-\centering
-\end{figure}\todo{citace https://www.citrix.com/content/dam/citrix/en\_us/documents/products-solutions/forrester-wave-server-hosted-virtual-desktops-q3-2015.pdf}
-
-Podle této analýzy jsou jasnými lídry trhu s centralizovanou virtualizací společnosti Citrix a VMWare a to s obrovským tržním i technologickým náskokem. V grafu \ref{Forrester_Wave} je vidět také společnost Dell, která však již vlastní řešení dále nenabízí a prohlubuje spolupráci s produkty od VMWare, jelikož tuto společnost získala akvizicí jejího původního vlastníka, společnosti EMC, v září roku 2016. \todo{citace https://www.emc.com/about/news/press/2016/20160907-01.htm} 
-
-Průzkum trhu od společnosti IDC z roku 2016 \todo{citovat IDC VM} \ref{IDC_VM} má širší zaměření, a to na poskytovatele VCC (Virtual Client Computing). Ty definuje jako poskytovatele kteří tvoří a prodávají software pro virtualizaci se zaměřením na centralizované virtuální desktopy, distribuované virtuální desktopy a software pro virtuální uživatelské sezení (VUS). Průzkum je zaměřen především na obchodní úspěch hodnocených společností. Dále doporučuje zohlednit při výběru poskytovatele kvalitu systému pro správu zařízení, bezpečnost řešení, možnosti grafického výstupu a kompaktibilitu s užívanými aplikacemi. 
-
- \begin{figure}[h]\label{IDC_VM}
-\includegraphics[width=13cm]{img/IDC_VM}
-\caption{IDC MarketScape: Hodnocení dodavatelů VCC } 
-\label{EMM:quadrant}
-\centering
-\end{figure}\todo{citace http://campaign.vmware.com/imgs/GlobalCampaigns/39249/IDC\_MarketScape\_Worldwide\_Virtual\_Client\_Computing\_Software\_2016\_Vendor\_Assessment.pdf}
-
-Podle tohoto průzkumu trhu s VCC jasně vládnou společnosti VMWare a Citrix. Nikdo další již nebyl zařazen do segmentu lídrů. Za zmínku dále stojí Microsoft, který má silnou pozici na trhu.
-
-
-
-\subsection{Citrix}
-Řešení XenDesktop se vyznačuje podporou vlastního protokolu HDX \todo{citace https://www.citrix.com/blogs/2014/08/18/citrix-xendesktopxenapp-what-is-hdx-its-not-just-ica/} díky kterému se snaží o adaptivní kompresi, de-duplikaci síťového provozu a přesměrování tíhy renderování dle okolností na klienta a to na všech podporovaných platformách. Dále podporuje vícenásobné 4k monitory a pokročilé funkce pro multimedia a videokonference. Výhodou je podpora amerického bezpečnostního standardu FIPS 140-2.
-Podle \todo{citace forrestera} má XenDesktop výborné uživatelské hodnocení, avšak technická podpora je pomalá.
-
-Oproti konkurenčnímu produktu od VMWare nabízí Citrix i virtualizaci Linuxových desktopů. Chlubí se třikrát rychlejším tiskem, šestkrát rychlejším spouštěním aplikací, pětkrát rychlejším ukládání souborů či podporou virtualizovaného Skype for Bussiness. Je možné jej nasadit na jakýkoliv cloud, jakýkoliv hypervizor, síť, do cloudu, lokálně či hybridně. \todo{ciace https://www.citrix.com/content/dam/citrix/en\_us/documents/products-solutions/why-choose-citrix-over-vmware-infographic.pdf a https://www.citrix.com/content/dam/citrix/en\_us/documents/white-paper/three-areas-where-citrix-xenapp-and-xendesktop-outperform-vmware-horizon.pdf}
-
-XenDesktop je možné provozovat také v cloudu. Zvolit lze libovolný hypervizor z nabídky VMWare ESX, Microsoft Hyper-V nebo Citrix XenServer. Pro offline použití existuje hypervizor typu 2 pro MacOS a Windows jménem DesktopPlayer. 
-
-Pro virtualizaci aplikací nabízí Citrix platformu XenApp.
-
-
-\subsection{VMWare}
-VMWare nabízí produkt VMWare \textbf{Horizon View}. Použitý protokol je PCoIP od firmy Teradici. Je vhodný v kombinaci serverem vSphere, kdy nabízí dobrou integraci. Nabízí též škálování do cloudu v kooperaci s řešením Horizon Air. Taktéž moduly software od VMWare splňují bezpečnostní standard FIPS 140-2. \todo{citace http://www.vmware.com/security/certifications/fips.html}. Horizon View je také možné zakoupit jako součást kompletního balíku, který obsahuje taktéž Horizon Flex pro offline použití. Podle \todo{zase ocitovat forrestera} hodnotí zákazníci produkt jako dobrý s několika problémy, jako například nutnost použití příkazové řádky pro některá nastavení.
-
-Další produkty pro virtualizaci pracovních prostředí jsou podle výrobce \todo{citace http://www.vmware.com/cz/products.html} následující:
-
-
-\textbf{Horizon 7} je platforma od VMWare pro virtuální desktopy a aplikace. \textit{Řešení Horizon 7 umožňuje zajišťovat, spravovat a chránit virtuální desktopy (VDI) a aplikace prostřednictvím jedné platformy.}
-
-\textbf{Horizon Air} je DaaS řešení od VMWare. \textit{Poskytuje virtuální desktopy a aplikace hostované v cloudu s širokou škálou možností včetně sdílených desktopů a aplikací.}
-
-\textbf{Horizon Flex} je řešení, které \textit{doručuje, spravuje a zabezpečuje místní virtuální desktopy se systémem Windows na počítačích Mac i PC a současně zajišťuje zabezpečení, možnosti řízení a dodržování požadavků.}
-
-\textbf{App Volumes} je \textit{portfolio integrovaných řešení pro správu aplikací a uživatelů pro virtuální prostředí řešení Horizon, Citrix XenApp a XenDesktop a RDSH.}
-
-\textbf{Mirage} \textit{nabízí správu bitových kopií desktopů pro fyzické desktopy a zařízení POS v nejrůznějších distribuovaných prostředích.}
-
-\textbf{NSX for Horizon} \textit{je síťové řešení infrastruktury virtuálních desktopů (VDI) se zásadami, které jsou dynamicky spojeny s desktopy.}
-
-\textbf{Virtual SAN for Horizon} \textit{Řešení VMware vSAN snižuje zákazníkům počáteční náklady a umožňuje jim využívat celou řadu předkonfigurovaných zařízení pro řešení Horizon, včetně zařízení Virtual SAN Ready Node a infrastruktury postavené na řešení EVO SDDC.}
-
-\textit{VMware \textbf{ThinApp} je řešení pro virtualizaci aplikací bez agentů, které izoluje aplikace od použitých operačních systémů a díky tomu eliminuje konflikty a zjednodušuje doručování a správu.}
-
-\textbf{Řešení User Environment Manager} \textit{nabízí podnikovou správu uživatelů vytvářející přizpůsobené prostředí pro koncové uživatele na všech zařízeních a místech.}
-
-\textbf{Produkty Fusion počítače Mac} \textit{Pomocí řešení VMware Fusion a VMware Fusion je možné používat na počítači Mac bez restartování systém Windows a stovky dalších operačních systémů.}
-
-\textbf{Produkty Workstation systém Windows} Řešení VMware Workstation a VMware Workstation Player představují oborový standard pro používání více operačních systémů jako virtuálních strojů na jednom počítači PC.
-
-\textbf{Řešení Workstation systém Linux} Produkty řešení VMware Workstation systém Linux představují oborový standard pro používání více operačních systémů jako virtuálních strojů na jednom počítači se systémem Linux.
-
-VMware tvrdí, že jeho řešení nabízí oproti konkurenčnímu Citrixu lepší správu a reporting nebo také centrální správu obrazů systémů ať už pro fyzické, virtuální nebo BYOD stroje. \todo{citace http://digital.leadmagz.com/ingrammicro/VMware/VMware\_Why\_Horizon\_over\_Citrix\_Whitepaper.pdf}
-
-
-\subsection{Microsoft}
-Microsoft nabízí virtuální pracovní stanice skrze platformu Windows Server. Nenabízí sice DaaS řešeni, ale nabízí virtualizaci aplikací Microsoft Azure RemoteApp. Ty mohou fungovat buďto v čistě cloudovém nebo hybridním módu. VDI je provozováno pod značkou RDS (Remote Desktop Service) jako uživatelské sezení na Windows Server. Z toho důvodu nenabízí tolik možností nastavení a správy jako plná virtualizace. \todo{citace http://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/view/vmware-horizon-vs-microsoft-quick-look.pdf}
-
-\subsection{Oracle}
-Oracle nabízí nástroj Secure Global Desktop, který je možné použít s různými hypervizory, je ovšem optimalizovaný pro Oracle. Hlavní devízou řešení je kvalitní konzole pro správu Oracle Enterprise Manager. Podle \todo{zase cituj forestra} toto řešení není vhodné pro případy užití mimo prostředí s vysokým podílem aplikací od Oracle.
-
-Dále nabízí program VirtualBox. Jedná se o hypervizor typu 2, v základní verzi je zdarma i pro komerční užití. Je zaměřený spíše na vývojáře a nenabízí mnoho nástrojů pro vzdálenou správu. \todo{http://www.oracle.com/us/technologies/virtualization/oracle-vm-virtualbox-overview-2981353.pdf}
-
-\subsubsection{Amazon}
-
-Amazon nabízí DaaS službu Amazon workspaces. Je postavená na platformě Windows server 2008 a používá protokol PCoIP. Je možné volit z mnoha hardwarových konfigurací. Službul lze propojit s firemním Active directory. \todo{citace http://www.networkcomputing.com/storage/guide-vdi-evaluating-top-vendors/1908233543/page/0/5}
-
+\todo{Napsat tomu intro}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Konzultujte navrhované řešení se zástupci vybrané organizace a stanovte doporučení pro nasazení. 
@@ -186,9 +15,11 @@ Amazon nabízí DaaS službu Amazon workspaces. Je postavená na platformě Wind
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Navrhněte nasazení řešení BYOD. 
-\section{Návrh řešení}
+\section{Návaznost na stávající řešení}
+
+
+
+\section{Návrh řešení pro notebooky}
 
 KB nehledá komlexní řešení pro virtualizaci pracovních stanic. Stávající situace, kdy zaměstnanci používají firemní zařízení je vyhovující a není důvod do ní jakkoli výrazněji zasahovat. Je však třeba najít odpověď na narůstající trend vlastních zařízení a především představit rámec pro kontraktory, kteří firemním zařízení nedisponují tak, aby nebyli rizikem pro vnitřní síť KB a jejich chování v rámci sítě bylo kontrolováno firemními politikami.
 
@@ -196,8 +27,7 @@ KB nehledá komlexní řešení pro virtualizaci pracovních stanic. Stávajíc�
 
 Vzhledem k nároků kladeným na BYOD v KB vychází jako řešení nejlépe distribuovaná virtualizace. Navržené řešení umožňuje pokročilou správu distribuovaných virtuálních strojů nutnou pro plnění firemních politik jak ze strany KB, tak i případně ze strany domovské firmy kontraktora.
 
-\section{Návrh řešení pro notebooky}
-
+\subsection{VMware Horizon Flex}
 V roce 2014 VMWare představil VMWare řešení VMWare Horizon Flex. Jedná se o kombinaci některých stávajících technologií jako jsou Fusion, Player, Mirage či AirWatch. \todo{citace http://blogs.gartner.com/mark-lockwood/2014/10/14/is-vmwares-horizon-flex-the-answer-to-byod/}. Je odpovědí na požadavky zákazníku provozovat virtuální desktopy offline. Zároveň přináší výhody virtualizace, ale nenese s sebou velké náklady v podobě nutnosti výkonných serverů a dostatečného diskového úložiště jako v případě centralizované virtualizice, což byl jeden s hlavních důvodů, proč centralizovaná virtualizace v KB není rozšířena jako alternativa pro řešení BYOD, viz (\ref{projektVDI}). Nevýhoda virtualizace v podobě vysokých nároků na konektivitu a špatné odezvy je u tohoto řešení taktéž neexistující. 
 
 Uživatelé mohou přistupovat do korporátní sítě z korporátního obrazu operačního systému, ale přitom použivat své vlastní notebooky nebo počítače od firmy Apple, bez toho aby tyto zařízení muselo IT oddělení podporovat. IT může plně spravovat korporátní systém bez toho, aby zasahovalo do operačního systému uživatele. Bezpečnostní rizika jsou minimalizována díky oddělení obou operačních systémů a možnosti vzdáleně řídit omezení pro virtuální stoj, či ho dokonce vzdáleně uzamknout či smazat. Tato možnost je obzvláště výhodné u externích pracovníků, kterým může vypršet kontrakt. Do systému Horizon FLEX je možné zapojit také obrazy virtuálních strojů sloužící pro testování a lépe je tak spravovat.
@@ -205,10 +35,10 @@ Uživatelé mohou přistupovat do korporátní sítě z korporátního obrazu op
 Technicky se jedná o hypervizor typu 2, který je spravovaný centrálně. Je možné jej nasadit jak pro koncové stanice s Mac OS, tak s Windows. Spravovat, zálohovat a záplatovat systém je též možné centrálně, a to s užitím serveru Mirage for Horizon FLEX. Pro nastavení politik řešení obsahuje Horizon FLEX Policy Server, jako klient je použit VMware Fusion Pro pro počítače Mac a VMware Workstation Player pro počítače s Windows.  \todo{citovat http://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/techpaper/vmware-horizon-flex-solution-brief-mirage-fusion-player.pdf} Pro klienta jsou podporovány následující 64bitové operační systémy: Windows 7, Windows 8.1, Windows 10, Mac OS X 10.9, Mac OS X 10.10 a Mac OS X 10.11.
 
  \begin{figure}[h!]\label{FlexVrstvy}
-\includegraphics[width=10cm]{img/FlexVrstvy}
+ \centering
+\includegraphics[width=8cm]{img/FlexVrstvy}
 \caption{Vrstvy produktu VMWare Horizon FLEX} 
 \label{FlexVrstvy}
-\centering
 \end{figure}\todo{citovat http://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/techpaper/vmware-horizon-flex-solution-brief-mirage-fusion-player.pdf}
 
 
@@ -217,9 +47,9 @@ Různě nastavené virtuální stroje je možné distribuovat různým uživatel
 
 
  \begin{figure}[h!]\label{FlexPolicy}
-\includegraphics[width=10cm]{img/FlexPolicy}
+ \centering
+\includegraphics[width=6cm]{img/FlexPolicy}
 \caption{Schéma pro připojení k Horizon Flex Policy serveru}
-\centering
 \end{figure}\todo{citovat http://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/techpaper/vmware-horizon-flex-solution-brief-mirage-fusion-player.pdf} 
 
 
@@ -239,10 +69,187 @@ Pro nastavování politik slouží webové uživatelské rozhraní. Je možné n
 
 Virtuální stroj je též možné vzdáleně uzamknout a nebo smazat.
 
+\section{Návrh nasazení řešení WMware Horizon FLEX}
+\todo{citovat http://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/techpaper/vmware-horizon-flex-deployment-considerations.pdf}
+
+V první řadě je třeba vyhradit prostor na kterém budou umístěny obrazy pro virtuální stroje. Je vhodné připravit souborové servery pomocí IIS a to jeden uvnitř podnikové sítě a jeden vně. Dále je potřeba nainstalovat Mirage Management server a jeho komponenty. Při zadání sériového čísla se zpřístupní funkce pro Horizon FLEX. 
+
+Jelikož v prostředí KB se používá operační systém Windows, pro vytvoření obrazu pro virtuální stroj je potřeba použít nástroj VMware Workstation Pro, viz. obrázek \ref{workstation}
+
+\begin{figure}[h!]\label{workstation}
+\centering
+\includegraphics[width=10cm]{img/workstation}
+\caption{Schéma postupu pro vytvoření obrazu virtuálního stroje}
+
+\end{figure}\todo{citovat http://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/techpaper/vmware-horizon-flex-deployment-considerations.pdf} 
+
+
+
+
+\begin{figure}[h!]\label{schemaArchitektury}
+\centering
+\includegraphics[width=10cm]{img/schemaArchitektury}
+\caption{Doporučené schéma infrastruktury pro nasazení VMware Horizon FLEX}
+\end{figure}\todo{citovat http://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/techpaper/vmware-horizon-flex-deployment-considerations.pdf} 
+
+
+Po instalaci serveru Mirage je třeba nainstalovat nainstalovat ostatní komponenty Horizon FLEX, nastavit certifikáty pro virtuální stroje, vytvořit a přiřadit virtuální stroje a nakonec nainstalovat klienty na koncová zařízení. Klienty je možné distribuovat uživatelům s připravenými virtuálními stroji. 
+
+Jelikož jeden Horizon FLEX Server dokáže obsloužit až 10000 uživatelů, bude pro potřeby KB stačit pouze jeden server. 
+
+
+
 \section{Návrh řešení pro mobilní zařízení}
 
+Z analýzy požadavků uživatelů vyplynulo, že pro mobilní telefony je požadována především dostupnost emailu a pro tablety je to především dostupnost emailu, dokumentů a PIM. Z hlediska požadavků bussinesu je to vzhledem k povaze bankovního sektoru především vysoká bezpečnost.
+
+Přestože leaderem trhu EMM je řešení AirWatch od společnosti VMware, v klíčových vlastnostech pro KB není nejsilnější. VMware je vysoce modulární řešení schopné plnit vysoké nároky. Jeho slabou stránkou je PIM, kde je doporučeno použít řešení od třetí strany.
+
+V klíčových požadavcích exceluje řešení od společnosti BlackBerry. Pro email a PIM nabízí kvalitní produkt BlackBerry Work. V oblasti bezpečnosti je společností Gartner hodnocen jako nejlsilnější hráč na trhu \todo{citace https://www.gartner.com/doc/reprints?id=1-3GSO3TQ\&ct=160902\&st=sb}.
+
+\begin{figure}[h!]\label{GartnerBB}
+\centering
+\includegraphics[width=10cm]{img/GartnerBB}
+\caption{Hodnocení dodavatelů software pro vysoce bezpečnou správu mobilních zařízení v kategorii BYO od spole4nosti Gartner}
+\end{figure}\todo{citovat https://www.gartner.com/doc/reprints?id=1-3GSO3TQ\&ct=160902\&st=sb} 
+
+Společnost Gartner hodnotila produkt v několika kategoriích. 
+
+Z hlediska certifikací a ocenění je situace rozdílná pro každou aplikaci v balíku. Good Dynamics je certifikován jako EAL4+. Kryptografické komponenty jsou certifikovány jako FIPS 140-2 Level 1. Mezi další certifikace, které splňují komponenty od Good technologies patří například ISO 19790 či další státní a armádní normy.
+
+Co se týče MDM funkce nabízí BlackBerry všechny běžné funkce. Platforma podporuje Android for Work i Samsung Knox. Kontejnerizaci aplikací zajišťuje komponenta Good Dynamics. Je možné chránit aplikace hesly a přiřazovat jim certifikáty. Kontejnery mezi sebou mohou komunikovat s užitím certifikátů podepsaných backendovým serverem. 
+
+
+Dalším důvodem pro volbu BlackBerry je použití tohoto řešení v mateřské firmě Société Générale. Během analýzy bylo zjištěno, že toto řešení se připravuje také pro KB a že během vypracovávání této diplomové práce začala fáze plošného nasazování. Jelikož je řešení od BlackBerry podle analýzy požadavků v této práci nejvhodnějším řešením, tato práce nasazení zvoleného řešení podporuje. Řesení je integrovatelné s řešením od různých poskytovatelů NAC včetně řešení od Cisca.    
+
+Nejdůležitější komponentou pro potřeby KB je BlackBerry Work. Dle specifikací \todo{citovat https://ca.blackberry.com/enterprise/gfe-comparison} nabízí následující funkcionalitu:
+
+Email:
+\begin{itemize}
+    \item Synchronizace emailu
+    \item Správa emailu
+    \item Zabezpečené zobrazování příloh
+    \item Správa fotografií
+    \item Vyhledávání emailů na serveru
+    \item Prioritizace oznámení
+    \item Inegrace s nositelnostmi
+\end{itemize}
+
+Kalendář:
+\begin{itemize}
+ \item Synchronizace kalendáře
+ \item Připojení ke konferenčním hovorům
+ \item Plánuvání meetingů
+ \item Zprávy "mimo kancelář"
+ \item Zobrazení přijatých pozvánek
+\end{itemize}
+
+Kontakty:
+\begin{itemize}
+   \item Synchronizace kontaktů
+   \item Vyhledávání v pracovních kontaktech přímo z telefonu
+   \item Historie zpráv
+\end{itemize}
+
+Kolaborace:
+\begin{itemize}
+   \item Ukládání souborů do repozitáře
+   \item Zabezpečený prohlížeč pro přístup k firemnímu intranetu
+   \item Správa úkolů
+   \item Přístup k dokumentům ve službách SharePoint, OneDrive nebo Box
+   \item Prezentační mód pro prezentaci PowerPoint dokumentů
+\end{itemize}
+
+Zajímavou funkcí je jednoduchý přístup pomocí funkce Touch ID na zařízeních s operačním systémem iOS podporující funkci Touch ID.\\
+
+Možnoti administrace:
+\begin{itemize}
+   \item Šifrovaný kontejner
+   \item Integrované MDM
+   \item Jednotný dokumentový server
+   \item Integrované MAM
+   \item Použití technologie Exchange ActiveSync
+   \item Rozdělení účtování dat na pracovní a soukromý provoz
+\end{itemize}
+
+\subsection{Návrh licencování}
+
+Nejnutnější funkce pro splnění požadavků předpokládaných uživatelů BYOD splňuje komponenta BlackBerry Work. Ta je součástí skupiny služeb BlackBerry Dynamics. Aplikace BlackBerry Dynamics se licencují pouze jako součást balíku Blackberry Enterprise Mobile Suites, který je nabízen v různých edicích.
+
+Pro splnění požadavků na funkce emailu je postačuje edice BlackBerry Enterprise Mobility Suite --  Enterprise Edition. Pro pokročilejší práci s dokumenty vyžadovanou pro BYOD tablety je třeba zakoupit vyšší edici BlackBerry Enterprise Mobility Suite -- Collaboration Edition, viz \todo{ citovat datasheet https://global.blackberry.com/content/dam/blackberry-com/PDF/enterprise/ds-blackberry-enterprise-mobility-suite.pdf}. Tato vyšší edice je též třeba pro integraci s IM klientem Skype for Bussiness.
+
+Tato edice nabízí následující typy aktivace: Work and personal - Regulated, Work space only, Work and personal - user privacy (Android for Work -- Premium), Work space only (Android for Work - Premium), Work and personal - user privacy (Samsung KNOX), Work and personal - full control (Samsung KNOX), Work space only (Samsung KNOX). Nabízí tedy vhodné možnosti jak pro BYOD zařízení, tak pro správu firemních zařízení. 
+
+Pro BYOD mobilní telefony s operačním systémem Android je tedy vhodná licence BlackBerry Enterprise Mobility Suite -- Enterprise Edition a typ aktivace Work and personal -- user privacy.
+
+Pro BYOD mobilní telefony s operačním systémem iOS je vhodná licence BlackBerry Enterprise Mobility Suite -- Enterpirse Edition a typ aktivace user privacy.
+
+Pro BYOD tablety s operařním systémem Android je nejvhodnější licence BlackBerry Enterprise Mobility Suite -- Collaboration Edition a typ aktivace Work and personal - user privacy (Android for Work - Premium).
+
+Pro BYOD tablety s operačním systémem iOS je nejvhodnější licence BlackBerry Enterprise Mobility Suite -- Collaboration Edition a typ aktivace User privacy.
+
+Pro všechny BYOD užití je vhodnější serverový typ licence.
+
+Informace o licencování byly čerpány z oficiální dokumentace \todo{citovace http://help.blackberry.com/en/blackberry-uem/12.6/licensing/dhd1465315353877.html}.
+
+
+\section{Návrh nasazení řešení pro mobilní zařízení}
+
+\subsection{Komponenty řešení}
+
+
+Základním kamenem řešení je BlackBerry Unified Endpoint Management (UEM).\todo{cituju http://help.blackberry.com/en/blackberry-uem/current/} Jedná se o infrastrukturu pro zajištění MDM. BlackBerry Infrastructure je vnější server, který spravuje informace o zařízení jako jsou licence a šifrovaně komunikuje s UEM a také s koncovými zařízeními.
+
+\begin{figure}[h!]\label{BBUEM1}
+\centering
+\includegraphics[width=12cm]{img/BBUEM1}
+\caption{Architektura BlackBerry UEM}
+\end{figure}\todo{citovat http://help.blackberry.com/en/blackberry-uem/current/} 
+
+Pro potřeby splnění požadavků na BYOD je potřeba nasadit další komponenty balíku BlackBerry Enterprise Mobile Suite na úrovni edice Collaboration Edition. Na obrázku \ref{BBEMS} jsou jednotlivé komponenty rozkreslené.
+
+\begin{figure}[h!]\label{BBEMS}
+\centering
+\includegraphics[width=13cm]{img/BBEMS}
+\caption{Schéma komponentů balíku BlackBerry Enterprise Mobility Suite}
+\end{figure}\todo{citovat http://help.blackberry.com/en/blackberry-enterprise-products/latest/enterprise-products/eqg1459529064051.html} 
+
+Jádrem řešení je BlackBerry UEM, který dále obsahuje subkomponenty jako jsou mimo jiné logování, monitoring, reportování, funkce pro správu, služby pro autentifikaci a autorizaci, plánování a zasílání příkazů či IT politiky a profily zařízení. BlackBerry Control služí k zasílání konfiguračních dat do aplikací BlackBerry Dynamics v koncových zařízeních. BlackBerry Collaboration Service poslouží k propojení se službou Microsoft Skype For Business. 
+
+BlackBerry Enterprise Mobility Server slouží k posílání dat do BlackBerry Dynamics Apps. Většina funkcí je využitelná až u vyšších edicí BlackBerry Enterprise Mobility suite.
+
+\subsection{Kroky instalace}
+V první řadě je třeba nainstalovat BlackBerry UEM. Dále je třeba nainstalovat BlackBerry Enterprise Mobility Server. V rámci tohoto severu je třeba nakonfigurovat BlackBerry Dynamics a nastavit certifikáty.  Dále je třeba nastavit přístup do Active directory, SMTP server a Exchange ActiveSync. Dalším krokem je nastavení konektivity pro BlackBerry Dynamics. Po té je nutné nastavit BlackBerry Dynamics profil a zpřístupnit tak uživatelům aplikace BlackBerry Work a BlackBerry Access. 
+
+V BlackBerry dynamics je možné nastavit některé politiky. Pro účely BYOD zařízení je třeba nastavit zamezení přístupu uživatelům s operačním systémem umožnující administrátorské operace (JailBreak/Root) a nastavit interval nutný pro synchronizaci s UEM.
+
+Posledním krokem je nastavení uživatelských účtů a skupin. Aktivace z hlediska uživatele spočívá v instalaci software BlackBerry UEM a BlackBerry work z obchodu s aplikacemi pro svůj operační systém. Další postup aktivace je triviální.
+
+\subsection{Integrace s Cisco ISE}
+
+\todo{todle vsecko cituju z manualu http://help.blackberry.com/en/blackberry-uem/12.6/}
+
+BlackBerry UEM je možné integrovat s Cisco ISE, čož je NAC prvek používaný v KB. Díky této integraci ISE může od UEM získávat data o zařízení, na základě kterých může povolit nebo zamítnout přístup zařízení do firemní sítě.
+
+Cisco ISE vyžaduje v UEM vlastní administrátorský profil, ten je třeba nastavit. Dále je třeba importovat do ISE BlackBerry Web Service Certificate exportovaný z UEM. V ISE je nyní možné nastavit připojení k UEM. 
+
+Nyní může ISE získávat data o zařízení jako je MAC adresa, splnění politik, nastavení šifrování, informace o aktivaci v UEM, detekce jailbreak, výrobce, model, sériové číslo, verze operačního systému, nastavení zaheslování.
+
+Dále je díky integraci přímo z ISE možné vymazat ze zařízení pracovní data nebo jej uzamknout.
+
+\todo{obr ISE str 366}
+
+
+Maximální počet uživatelů na jeden server 20 000, což znamená, že KB bude stačit jediný server. 
+
 \todo{Nasazeni - Cisco guide}
-\todo{Nasazeni - Cisco Airwatch integration}
+\todo{Nasazeni - Cisco Good Integration}
+
+
+\todo{Návrh dalších opatření}
+\todo{nastavení pravidel}
+\todo{určení kompenzací zaměstnanci vs kontraktoři}
+\todo{zákazy, směrnice smlouva}
 
 
 %Zhodnoťte uskutečnitelnost řešení a analyzujte benefity a rizika spojená se zavedením navrženého konceptu.
