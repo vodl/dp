@@ -1,22 +1,18 @@
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Navrhněte nasazení řešení BYOD. 
-\section{Návrh řešení}
-
 
 \todo{Napsat tomu intro}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Konzultujte navrhované řešení se zástupci vybrané organizace a stanovte doporučení pro nasazení. 
-\section{Hodnocení navrhované varianty zástupci KB}\todo{sehnat}
-
-
+V této kapitole bude podrobně popsán návrh řešení pro BYOD program v Komerční bance. Volba produktů pro uskutečnění řešení bude odůvodněna a taktéž bude popsána jejich funkcionalita. Závěr kapitoly se věnuje nasazaní vybraného řešení jak po technické stránce, tak po stránce formální. 
 
 
 \section{Návaznost na stávající řešení}
+\todo{napsat}
+V KB existuje projekt pro centralizovanou virtualizaci. Navržené řešení na tento projekt nenavazuje a navrhuje jiný přístup. Zároveň je v KB nasazována infrastruktura pro použití BlackBerry Work. Tato práce na toto řešení navazuje a rozšiřuje jeho použití jako součást koncepce návrhu uceleného BYOD programu. 
 
+Použitá síťová infrastruktura ve firmě je nyní vcelku komplexní. Navržené řešení se snaží nasazené infrastruktury využít a nenavrhuje žádné významné změny. 
+
+Stávající proces připojování nefiremních zařízení by měl být nahrazen zařazením nefiremních zařízení do uceleného BYOD programu
 
 
 \section{Návrh řešení pro notebooky}
@@ -25,32 +21,43 @@ KB nehledá komlexní řešení pro virtualizaci pracovních stanic. Stávajíc�
 
 \todo{Návaznost na kapitolu kde analizuju KB BYOD podle prezentace}
 
-Vzhledem k nároků kladeným na BYOD v KB vychází jako řešení nejlépe distribuovaná virtualizace. Navržené řešení umožňuje pokročilou správu distribuovaných virtuálních strojů nutnou pro plnění firemních politik jak ze strany KB, tak i případně ze strany domovské firmy kontraktora.
+Vzhledem k nárokům kladeným na BYOD v KB vychází jako řešení nejlépe distribuovaná virtualizace. Navržené řešení umožňuje pokročilou správu distribuovaných virtuálních strojů nutnou pro plnění firemních politik jak ze strany KB, tak i případně ze strany domovské firmy kontraktora.
+
+Tato práce jako řešení BYOD pro notebooky navrhuje produkt VMware Horizon FLEX.
+
+
 
 \subsection{VMware Horizon Flex}
-V roce 2014 VMWare představil VMWare řešení VMWare Horizon Flex. Jedná se o kombinaci některých stávajících technologií jako jsou Fusion, Player, Mirage či AirWatch. \todo{citace http://blogs.gartner.com/mark-lockwood/2014/10/14/is-vmwares-horizon-flex-the-answer-to-byod/}. Je odpovědí na požadavky zákazníku provozovat virtuální desktopy offline. Zároveň přináší výhody virtualizace, ale nenese s sebou velké náklady v podobě nutnosti výkonných serverů a dostatečného diskového úložiště jako v případě centralizované virtualizice, což byl jeden s hlavních důvodů, proč centralizovaná virtualizace v KB není rozšířena jako alternativa pro řešení BYOD, viz (\ref{projektVDI}). Nevýhoda virtualizace v podobě vysokých nároků na konektivitu a špatné odezvy je u tohoto řešení taktéž neexistující. 
+V roce 2014 VMware představil VMware řešení VMware Horizon Flex. Jedná se o kombinaci některých stávajících technologií jako je Fusion, Player, Mirage či AirWatch. 
+\todo{citace 
+%http://blogs.gartner.com/mark-lockwood/2014/10/14/is-vmwares-horizon-flex-the-answer-to-byod/
+}. Je odpovědí na požadavky zákazníku provozovat virtuální desktopy offline. Zároveň přináší výhody virtualizace, ale nenese s sebou velké náklady v podobě nutnosti výkonných serverů a dostatečného diskového úložiště jako v případě centralizované virtualizice, což byl jeden s hlavních důvodů, proč centralizovaná virtualizace v KB není rozšířena jako alternativa pro řešení BYOD, viz (\ref{projektVDI}). Nevýhoda virtualizace v podobě vysokých nároků na konektivitu a špatné odezvy je u tohoto řešení taktéž neexistující. 
 
-Uživatelé mohou přistupovat do korporátní sítě z korporátního obrazu operačního systému, ale přitom použivat své vlastní notebooky nebo počítače od firmy Apple, bez toho aby tyto zařízení muselo IT oddělení podporovat. IT může plně spravovat korporátní systém bez toho, aby zasahovalo do operačního systému uživatele. Bezpečnostní rizika jsou minimalizována díky oddělení obou operačních systémů a možnosti vzdáleně řídit omezení pro virtuální stoj, či ho dokonce vzdáleně uzamknout či smazat. Tato možnost je obzvláště výhodné u externích pracovníků, kterým může vypršet kontrakt. Do systému Horizon FLEX je možné zapojit také obrazy virtuálních strojů sloužící pro testování a lépe je tak spravovat.
+Uživatelé mohou přistupovat do korporátní sítě z korporátního obrazu operačního systému, ale přitom použivat své vlastní notebooky nebo počítače od firmy Apple, bez toho, aby tyto zařízení muselo IT oddělení podporovat. IT může plně spravovat korporátní systém bez toho, aby zasahovalo do operačního systému uživatele. Bezpečnostní rizika jsou minimalizována díky oddělení obou operačních systémů a možnosti vzdáleně řídit omezení pro virtuální stoj, či ho dokonce vzdáleně uzamknout či smazat. Tato možnost je obzvláště výhodná u externích pracovníků, kterým může vypršet kontrakt. Do systému Horizon FLEX je možné zapojit také obrazy virtuálních strojů sloužící pro testování a lépe je tak spravovat.
 
-Technicky se jedná o hypervizor typu 2, který je spravovaný centrálně. Je možné jej nasadit jak pro koncové stanice s Mac OS, tak s Windows. Spravovat, zálohovat a záplatovat systém je též možné centrálně, a to s užitím serveru Mirage for Horizon FLEX. Pro nastavení politik řešení obsahuje Horizon FLEX Policy Server, jako klient je použit VMware Fusion Pro pro počítače Mac a VMware Workstation Player pro počítače s Windows.  \todo{citovat http://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/techpaper/vmware-horizon-flex-solution-brief-mirage-fusion-player.pdf} Pro klienta jsou podporovány následující 64bitové operační systémy: Windows 7, Windows 8.1, Windows 10, Mac OS X 10.9, Mac OS X 10.10 a Mac OS X 10.11.
+Technicky se jedná o hypervizor typu 2, který je spravovaný centrálně. Je možné jej nasadit jak pro koncové stanice s Mac OS, tak s Windows. Spravovat, zálohovat a záplatovat systém je též možné centrálně, a to s užitím serveru Mirage for Horizon FLEX. Pro nastavení politik řešení obsahuje Horizon FLEX Policy Server, jako klient je použit VMware Fusion Pro pro počítače Mac a VMware Workstation Player pro počítače s Windows.  \todo{citovat %http://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/techpaper/ vmware-horizon-flex-solution-brief-mirage-fusion-player.pdf
+}
+Pro klienta jsou podporovány následující 64bitové operační systémy: Windows 7, Windows 8.1, Windows 10, Mac OS X 10.9, Mac OS X 10.10 a Mac OS X 10.11.
 
  \begin{figure}[h!]\label{FlexVrstvy}
  \centering
 \includegraphics[width=8cm]{img/FlexVrstvy}
 \caption{Vrstvy produktu VMWare Horizon FLEX} 
 \label{FlexVrstvy}
-\end{figure}\todo{citovat http://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/techpaper/vmware-horizon-flex-solution-brief-mirage-fusion-player.pdf}
+\end{figure}\todo{citovat %http://www.vmware.com/content /dam/digitalmarketing/vmware/ en/pdf/techpaper/ vmware-horizon-flex-solution-brief-mirage-fusion-player.pdf
+}
 
 
 
-Různě nastavené virtuální stroje je možné distribuovat různým uživatelům. Uživateli musí být nejdříve nainstalován klient a tedy Fusion Pro nebo Workstation Player. Uživatelský systém potřebuje přístup k Horizon FLEX Policy serveru v následujících případech: pro úvodní stažení obrazu stroje a pro získání aktualizací politik a omezení. Horizon Flex Policy Server musí být pro klienta dostupný pomocí https protocol. Je možné nastavit maximální počet dní bez připojení k Policy Serveru. Minimimální hardwarové požadavky serverů jsou sepsány v příloze (\ref{pozadavky})
+Různě nastavené virtuální stroje je možné distribuovat různým uživatelům. Uživateli musí být nejdříve nainstalován klient a tedy Fusion Pro nebo Workstation Player. Uživatelský systém potřebuje přístup k Horizon FLEX Policy serveru v následujících případech: pro úvodní stažení obrazu stroje a pro získání aktualizací politik a omezení. Horizon Flex Policy Server musí být pro klienta dostupný pomocí protokolu https. Je možné nastavit maximální počet dní bez připojení k Policy Serveru. Minimimální hardwarové požadavky serverů jsou sepsány v příloze (\ref{pozadavky})
 
 
  \begin{figure}[h!]\label{FlexPolicy}
  \centering
 \includegraphics[width=6cm]{img/FlexPolicy}
 \caption{Schéma pro připojení k Horizon Flex Policy serveru}
-\end{figure}\todo{citovat http://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/techpaper/vmware-horizon-flex-solution-brief-mirage-fusion-player.pdf} 
+\end{figure}\todo{citovat %http://www.vmware.com/ content/dam/digitalmarketing/ vmware/en/pdf/techpaper/ vmware-horizon-flex-solution-brief-mirage-fusion-player.pdf
+} 
 
 
 S užitím Policy serveru mohou adminstrátoři mimo jiné spravovat inventář omezených virtuálních strojů, procházet seznam uživatelů a skupin ve službě Active Directory, přiřazovat uživatele a skupiny k jednomu či více virtuálnímu stroji, specifikovat politiky pro dané přiřazení, omezit uživateli přístup k virtuálnímu stroji vzdáleným zamknutím nebo kontrolovat stav virtuálního stroje.
@@ -69,60 +76,52 @@ Pro nastavování politik slouží webové uživatelské rozhraní. Je možné n
 
 Virtuální stroj je též možné vzdáleně uzamknout a nebo smazat.
 
-\section{Návrh nasazení řešení WMware Horizon FLEX}
-\todo{citovat http://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/techpaper/vmware-horizon-flex-deployment-considerations.pdf}
+\subsection{Doporučení pro korporátní obraz virtuálního stroje}
+Obraz virtuálního stroje by měl odpovídat nastavení operačního systému pro firemní zařízení. Speciálním omezením by mělo být vynucení přístupu do sítě pouze prostřednictvím firemní VPN.
 
-V první řadě je třeba vyhradit prostor na kterém budou umístěny obrazy pro virtuální stroje. Je vhodné připravit souborové servery pomocí IIS a to jeden uvnitř podnikové sítě a jeden vně. Dále je potřeba nainstalovat Mirage Management server a jeho komponenty. Při zadání sériového čísla se zpřístupní funkce pro Horizon FLEX. 
+\subsection{Dodatek návrhu pro uživatele s operačními systémy linuxového typu}
+Řešení Horizon Flex bohužel nepodporuje operační systém Linux. Pro tento specifický typ uživatelů je tedy třeba navrhnout alternativu. Jelikož klient řešení Horizon Flex je produkt VMware workstation Pro, je vhodné pro zachování konzistence návrhu uživatelům operačního systému Linux navrhnout tohoto klienta. VMware Workstation for Linux podporuje následující operační systémy: Ubuntu 8.04 a vyšší, Red Hat Enterprise Linux 5 a vyšší, CentOS 5.0 a vyšší, Oracle Linux 5.0 a vyšší, open SUSE 10.2 a vyšší, SUSE Linux 10 a vyšší. U dalších distribucí systému typu Linux a Unix není oficiální podpora, ale řešení může být funkční.
 
-Jelikož v prostředí KB se používá operační systém Windows, pro vytvoření obrazu pro virtuální stroj je potřeba použít nástroj VMware Workstation Pro, viz. obrázek \ref{workstation}
+V tomto klientu je možné spouštět zašifrované omezené virtuální stroje určené pro Horizon Flex. Vzhledem k neexistenci komunikace s Policy serverem však není možné nastavené politiky dodatečně měnit či vzdáleně smazat či spravovat obraz virtuálního stroje. Přístup do stroje a firemní sítě je však možné znemožnit zneplatněním přístupu daného uživatele skrze Active directory a tedy jedná se stále o bezpečné řešení.
 
-\begin{figure}[h!]\label{workstation}
-\centering
-\includegraphics[width=10cm]{img/workstation}
-\caption{Schéma postupu pro vytvoření obrazu virtuálního stroje}
+\subsection{Licencování}
+Licence na Horizon Flex se vztahuje k zařízení. Prodávají se pouze v balících. Jeden balík obsahuje 10 licencí pro klienta a licenci pro VMWare Mirage For Flex a Horizon FLEX Policy Server.
 
-\end{figure}\todo{citovat http://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/techpaper/vmware-horizon-flex-deployment-considerations.pdf} 
-
-
-
-
-\begin{figure}[h!]\label{schemaArchitektury}
-\centering
-\includegraphics[width=10cm]{img/schemaArchitektury}
-\caption{Doporučené schéma infrastruktury pro nasazení VMware Horizon FLEX}
-\end{figure}\todo{citovat http://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/techpaper/vmware-horizon-flex-deployment-considerations.pdf} 
-
-
-Po instalaci serveru Mirage je třeba nainstalovat nainstalovat ostatní komponenty Horizon FLEX, nastavit certifikáty pro virtuální stroje, vytvořit a přiřadit virtuální stroje a nakonec nainstalovat klienty na koncová zařízení. Klienty je možné distribuovat uživatelům s připravenými virtuálními stroji. 
-
-Jelikož jeden Horizon FLEX Server dokáže obsloužit až 10000 uživatelů, bude pro potřeby KB stačit pouze jeden server. 
-
+Pro klienty VMware Workstation For Linux je třeba zakoupit zváštní licenci.
 
 
 \section{Návrh řešení pro mobilní zařízení}
 
 Z analýzy požadavků uživatelů vyplynulo, že pro mobilní telefony je požadována především dostupnost emailu a pro tablety je to především dostupnost emailu, dokumentů a PIM. Z hlediska požadavků bussinesu je to vzhledem k povaze bankovního sektoru především vysoká bezpečnost.
 
-Přestože leaderem trhu EMM je řešení AirWatch od společnosti VMware, v klíčových vlastnostech pro KB není nejsilnější. VMware je vysoce modulární řešení schopné plnit vysoké nároky. Jeho slabou stránkou je PIM, kde je doporučeno použít řešení od třetí strany.
+Přestože leaderem trhu EMM je řešení AirWatch od společnosti VMware, v klíčových vlastnostech pro KB není nejsilnější. AirWatch je vysoce modulární řešení schopné plnit vysoké nároky. Jeho slabou stránkou je PIM, kde je doporučeno použít řešení od třetí strany.
 
-V klíčových požadavcích exceluje řešení od společnosti BlackBerry. Pro email a PIM nabízí kvalitní produkt BlackBerry Work. V oblasti bezpečnosti je společností Gartner hodnocen jako nejlsilnější hráč na trhu \todo{citace https://www.gartner.com/doc/reprints?id=1-3GSO3TQ\&ct=160902\&st=sb}.
+V klíčových požadavcích exceluje řešení od společnosti BlackBerry. Pro email a PIM nabízí kvalitní produkt BlackBerry Work. V oblasti bezpečnosti je společností Gartner hodnocen jako nejlsilnější hráč na trhu \todo{citace %https://www.gartner.com/ doc/reprints?id=1-3GSO3TQ \&ct=160902\&st=sb
+}.
 
 \begin{figure}[h!]\label{GartnerBB}
 \centering
 \includegraphics[width=10cm]{img/GartnerBB}
-\caption{Hodnocení dodavatelů software pro vysoce bezpečnou správu mobilních zařízení v kategorii BYO od spole4nosti Gartner}
-\end{figure}\todo{citovat https://www.gartner.com/doc/reprints?id=1-3GSO3TQ\&ct=160902\&st=sb} 
+\caption{Hodnocení dodavatelů software pro vysoce bezpečnou správu mobilních zařízení v kategorii BYO od společnosti Gartner}
+\end{figure}\todo{citovat %https://www.gartner.com/doc/ reprints? id=1-3GSO3TQ\&ct=160902\&st=sb
+} 
 
 Společnost Gartner hodnotila produkt v několika kategoriích. 
 
 Z hlediska certifikací a ocenění je situace rozdílná pro každou aplikaci v balíku. Good Dynamics je certifikován jako EAL4+. Kryptografické komponenty jsou certifikovány jako FIPS 140-2 Level 1. Mezi další certifikace, které splňují komponenty od Good technologies patří například ISO 19790 či další státní a armádní normy.
 
-Co se týče MDM funkce nabízí BlackBerry všechny běžné funkce. Platforma podporuje Android for Work i Samsung Knox. Kontejnerizaci aplikací zajišťuje komponenta Good Dynamics. Je možné chránit aplikace hesly a přiřazovat jim certifikáty. Kontejnery mezi sebou mohou komunikovat s užitím certifikátů podepsaných backendovým serverem. 
+Co se týče MDM, nabízí BlackBerry všechny běžné funkce. Platforma podporuje Android for Work i Samsung Knox. Kontejnerizaci aplikací zajišťuje komponenta Good Dynamics. Je možné chránit aplikace hesly a přiřazovat jim certifikáty. Kontejnery mezi sebou mohou komunikovat s užitím certifikátů podepsaných backendovým serverem. 
 
 
-Dalším důvodem pro volbu BlackBerry je použití tohoto řešení v mateřské firmě Société Générale. Během analýzy bylo zjištěno, že toto řešení se připravuje také pro KB a že během vypracovávání této diplomové práce začala fáze plošného nasazování. Jelikož je řešení od BlackBerry podle analýzy požadavků v této práci nejvhodnějším řešením, tato práce nasazení zvoleného řešení podporuje. Řesení je integrovatelné s řešením od různých poskytovatelů NAC včetně řešení od Cisca.    
+Dalším důvodem pro volbu BlackBerry je použití tohoto řešení v mateřské firmě. Během analýzy bylo zjištěno, že toto řešení se připravuje také pro KB, a že během vypracovávání této diplomové práce začala fáze plošného nasazování. Jelikož je řešení od BlackBerry podle analýzy požadavků v této práci nejvhodnějším řešením, tato práce nasazení zvoleného řešení podporuje. Řesení je integrovatelné s řešením od různých poskytovatelů NAC včetně použitého řešení od Cisca.    
 
-Nejdůležitější komponentou pro potřeby KB je BlackBerry Work. Dle specifikací \todo{citovat https://ca.blackberry.com/enterprise/gfe-comparison} nabízí následující funkcionalitu:
+Tato práce navrhuje jako řešení pro BYOD mobilní zařízení produkt BlackBerry Enterprise Mobility Suite.
+
+
+\section{BlackBerry Enterprise Mobility Suite}
+
+Nejdůležitější komponentou pro potřeby Banky je BlackBerry Work. Dle specifikací \todo{citovat %https://ca.blackberry.com/ enterprise/gfe-comparison
+} nabízí následující funkcionalitu:
 
 Email:
 \begin{itemize}
@@ -174,9 +173,10 @@ Možnoti administrace:
 
 \subsection{Návrh licencování}
 
-Nejnutnější funkce pro splnění požadavků předpokládaných uživatelů BYOD splňuje komponenta BlackBerry Work. Ta je součástí skupiny služeb BlackBerry Dynamics. Aplikace BlackBerry Dynamics se licencují pouze jako součást balíku Blackberry Enterprise Mobile Suites, který je nabízen v různých edicích.
+Nejnutnější funkce pro splnění požadavků předpokládaných uživatelů BYOD splňuje komponenta BlackBerry Work. Ta je součástí skupiny služeb BlackBerry Dynamics. Aplikace BlackBerry Dynamics se licencují pouze jako součást balíku Blackberry Enterprise Mobility Suites, který je nabízen v různých edicích.
 
-Pro splnění požadavků na funkce emailu je postačuje edice BlackBerry Enterprise Mobility Suite --  Enterprise Edition. Pro pokročilejší práci s dokumenty vyžadovanou pro BYOD tablety je třeba zakoupit vyšší edici BlackBerry Enterprise Mobility Suite -- Collaboration Edition, viz \todo{ citovat datasheet https://global.blackberry.com/content/dam/blackberry-com/PDF/enterprise/ds-blackberry-enterprise-mobility-suite.pdf}. Tato vyšší edice je též třeba pro integraci s IM klientem Skype for Bussiness.
+Pro splnění požadavků na funkce emailu postačuje edice BlackBerry Enterprise Mobility Suite --  Enterprise Edition. Pro pokročilejší práci s dokumenty vyžadovanou pro BYOD tablety je třeba zakoupit vyšší edici BlackBerry Enterprise Mobility Suite -- Collaboration Edition, viz \todo{ citovat datasheet %https://global.blackberry.com/ content/dam/blackberry-com/PDF/enterprise/ ds-blackberry-enterprise-mobility-suite.pdf
+}. Tato vyšší edice je též třeba pro integraci s IM klientem Skype for Bussiness.
 
 Tato edice nabízí následující typy aktivace: Work and personal - Regulated, Work space only, Work and personal - user privacy (Android for Work -- Premium), Work space only (Android for Work - Premium), Work and personal - user privacy (Samsung KNOX), Work and personal - full control (Samsung KNOX), Work space only (Samsung KNOX). Nabízí tedy vhodné možnosti jak pro BYOD zařízení, tak pro správu firemních zařízení. 
 
@@ -190,29 +190,73 @@ Pro BYOD tablety s operačním systémem iOS je nejvhodnější licence BlackBer
 
 Pro všechny BYOD užití je vhodnější serverový typ licence.
 
-Informace o licencování byly čerpány z oficiální dokumentace \todo{citovace http://help.blackberry.com/en/blackberry-uem/12.6/licensing/dhd1465315353877.html}.
+Informace o licencování byly čerpány z oficiální dokumentace \todo{citovace %http://help.blackberry.com/ en/blackberry-uem/12.6/licensing/ dhd1465315353877.html
+}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Konzultujte navrhované řešení se zástupci vybrané organizace a stanovte doporučení pro nasazení. 
+\section{Hodnocení navrhované varianty zástupci organizace}
+Zástupci vybrané společnosti ohodnotili návrh jako jako splňující požadavky. Ocenili především splnění nároků na bezpečnost díky důslednému oddělení soukromého a pracovního prostředí. Z hlediska nasazení je hodnocen jako proveditelný, přičemž detailní plán nasazení by musel být analyzován a schválen dalšími odděleními vzhledem k zásahům do infrastruktury a součinnosti s jinými běžícími projekty. 
+Úskalím projektu by mohlo být vyjednávání o zapojení do pragramu s externími dodavateli a kontraktory.
+
+\section{Návrh nasazení řešení pro notebooky}
+\todo{citovat %http://www.vmware.com/ content/dam/digitalmarketing/ vmware/en/pdf/techpaper/ vmware-horizon-flex-deployment-considerations.pdf
+}
+
+V první řadě je třeba vyhradit prostor na kterém budou umístěny obrazy pro virtuální stroje. Je vhodné připravit souborové servery pomocí IIS a to jeden uvnitř podnikové sítě a jeden vně. Dále je potřeba nainstalovat Mirage Management server a jeho komponenty. Při zadání sériového čísla se zpřístupní funkce pro Horizon FLEX. 
+
+Jelikož v prostředí KB se používá operační systém Windows, pro vytvoření obrazu pro virtuální stroj je potřeba použít nástroj VMware Workstation Pro, viz. obrázek \ref{workstation}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=10cm]{img/workstation}
+\caption{Schéma postupu pro vytvoření obrazu virtuálního stroje}
+\label{workstation}
+\end{figure}\todo{citovat %http://www.vmware.com/content/ dam/digitalmarketing/vmware/en/ pdf/techpaper/ vmware-horizon-flex-deployment-considerations.pdf
+} 
+
+
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=10cm]{img/schemaArchitektury}
+\caption{Ilustrační schéma infrastruktury pro nasazení VMware Horizon FLEX}\label{schemaArchitektury}
+\end{figure}\todo{citovat %http://www.vmware.com/content/ dam/digitalmarketing/vmware/ en/pdf/techpaper/vmware-horizon-flex-deployment-considerations.pdf
+} 
+
+
+Po instalaci serveru Mirage je třeba nainstalovat nainstalovat ostatní komponenty Horizon FLEX, nastavit certifikáty pro virtuální stroje, vytvořit a přiřadit virtuální stroje a nakonec nainstalovat klienty na koncová zařízení. Klienty je možné distribuovat uživatelům s připravenými virtuálními stroji. 
+
+Jelikož jeden Horizon FLEX Server dokáže obsloužit až 10000 uživatelů, stačil by pro potřeby organizace pouze jeden server. Firemním standardem je však zajistit u podobných služeb vysokou dostupnost.
+
+
 
 
 \section{Návrh nasazení řešení pro mobilní zařízení}
+Jelikož nasazení řešení v Komerční bance již započalo, návrh nasazení soustředí spíše na popis a využitelnost řešení, než-li na technickou specifikaci návrhu pro nasazení.
 
 \subsection{Komponenty řešení}
 
 
-Základním kamenem řešení je BlackBerry Unified Endpoint Management (UEM).\todo{cituju http://help.blackberry.com/en/blackberry-uem/current/} Jedná se o infrastrukturu pro zajištění MDM. BlackBerry Infrastructure je vnější server, který spravuje informace o zařízení jako jsou licence a šifrovaně komunikuje s UEM a také s koncovými zařízeními.
+Základním kamenem řešení je BlackBerry Unified Endpoint Management (UEM). \todo{cituju %http://help.blackberry.com/en/blackberry-uem/current/
+} Jedná se o infrastrukturu pro zajištění MDM. BlackBerry Infrastructure je vnější server, který spravuje informace o zařízení jako jsou licence a šifrovaně komunikuje s UEM a také s koncovými zařízeními.
 
 \begin{figure}[h!]\label{BBUEM1}
 \centering
 \includegraphics[width=12cm]{img/BBUEM1}
 \caption{Architektura BlackBerry UEM}
-\end{figure}\todo{citovat http://help.blackberry.com/en/blackberry-uem/current/} 
+\end{figure}\todo{citovat %http://help.blackberry.com/ en/blackberry-uem/current/
+} 
 
 Pro potřeby splnění požadavků na BYOD je potřeba nasadit další komponenty balíku BlackBerry Enterprise Mobile Suite na úrovni edice Collaboration Edition. Na obrázku \ref{BBEMS} jsou jednotlivé komponenty rozkreslené.
 
-\begin{figure}[h!]\label{BBEMS}
+\begin{figure}[h!]
 \centering
 \includegraphics[width=13cm]{img/BBEMS}
-\caption{Schéma komponentů balíku BlackBerry Enterprise Mobility Suite}
-\end{figure}\todo{citovat http://help.blackberry.com/en/blackberry-enterprise-products/latest/enterprise-products/eqg1459529064051.html} 
+\caption{Schéma komponentů balíku BlackBerry Enterprise Mobility Suite}\label{BBEMS}
+\end{figure}\todo{citovat %http://help.blackberry.com/ en/blackberry-enterprise-products/ latest/enterprise-products/ eqg1459529064051.html
+} 
 
 Jádrem řešení je BlackBerry UEM, který dále obsahuje subkomponenty jako jsou mimo jiné logování, monitoring, reportování, funkce pro správu, služby pro autentifikaci a autorizaci, plánování a zasílání příkazů či IT politiky a profily zařízení. BlackBerry Control služí k zasílání konfiguračních dat do aplikací BlackBerry Dynamics v koncových zařízeních. BlackBerry Collaboration Service poslouží k propojení se službou Microsoft Skype For Business. 
 
@@ -223,34 +267,80 @@ V první řadě je třeba nainstalovat BlackBerry UEM. Dále je třeba nainstalo
 
 V BlackBerry dynamics je možné nastavit některé politiky. Pro účely BYOD zařízení je třeba nastavit zamezení přístupu uživatelům s operačním systémem umožnující administrátorské operace (JailBreak/Root) a nastavit interval nutný pro synchronizaci s UEM.
 
-Posledním krokem je nastavení uživatelských účtů a skupin. Aktivace z hlediska uživatele spočívá v instalaci software BlackBerry UEM a BlackBerry work z obchodu s aplikacemi pro svůj operační systém. Další postup aktivace je triviální.
+Posledním krokem je nastavení uživatelských účtů a skupin. Aktivace z hlediska uživatele spočívá v instalaci software BlackBerry UEM a BlackBerry Work z obchodu s aplikacemi pro svůj operační systém. Další postup aktivace je triviální.
+
+Maximální počet uživatelů na jeden server 20 000, což znamená, že KB bude stačit jediný server. 
 
 \subsection{Integrace s Cisco ISE}
 
-\todo{todle vsecko cituju z manualu http://help.blackberry.com/en/blackberry-uem/12.6/}
+\todo{todle vsecko cituju z manualu %http://help.blackberry.com/ en/blackberry-uem/12.6/
+}
 
 BlackBerry UEM je možné integrovat s Cisco ISE, čož je NAC prvek používaný v KB. Díky této integraci ISE může od UEM získávat data o zařízení, na základě kterých může povolit nebo zamítnout přístup zařízení do firemní sítě.
 
 Cisco ISE vyžaduje v UEM vlastní administrátorský profil, ten je třeba nastavit. Dále je třeba importovat do ISE BlackBerry Web Service Certificate exportovaný z UEM. V ISE je nyní možné nastavit připojení k UEM. 
 
-Nyní může ISE získávat data o zařízení jako je MAC adresa, splnění politik, nastavení šifrování, informace o aktivaci v UEM, detekce jailbreak, výrobce, model, sériové číslo, verze operačního systému, nastavení zaheslování.
+Nyní může ISE získávat data o zařízení jako je MAC adresa, splnění politik, nastavení šifrování, informace o aktivaci v UEM, detekce jailbreak, výrobce, model, sériové číslo, verze operačního systému nebo nastavení zaheslování.
 
 Dále je díky integraci přímo z ISE možné vymazat ze zařízení pracovní data nebo jej uzamknout.
 
-\todo{obr ISE str 366}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=13cm]{img/CiscoMDM}
+\caption{Ilustrace připojování uživatelů do sítě s využitím MDM}\label{CiscoMDM}
+\end{figure}\todo{citovat Cisco design guide} 
+
+Obrázek \ref{CiscoMDM} ilustruje návrh připojování uživatelů k bezdrátové síti s využítím integrace s MDM. Nejdříve se uživatel připojí k SSID pro přihlášení. Po úspěšném přihlášení se uživatel připojí k zabezpečené zaměstnanecké síti. ISE zavolá API MDM serveru, a pokud není registrováno je přesměrováno. V tomto kroku je možné přesměrovat uživatele na stránku produktu BlackBerry UEM obchodu s aplikacemi jeho operačního systému a automatizovat tak jeden z kroků pro nasazení na straně uživatele. Dále ISE získá informace od MDM serveru a do uloží jej do cache. Poté zkontroluje splnění politik. Pokud je kontrola úspěšná, zařízení jsou přiřazena patřičná práva v rámci sítě. Celý postup je vyobrazen v diagramu \ref{CiscoFlow}.
 
 
-Maximální počet uživatelů na jeden server 20 000, což znamená, že KB bude stačit jediný server. 
+\begin{figure}[h!]
+\centering
+\includegraphics[width=13cm]{img/CiscoFlow}
+\caption{Diagram pro připojování zařízení do sítě\label{CiscoFlow}}
+\end{figure}\todo{citovat Cisco design guide} 
 
 \todo{Nasazeni - Cisco guide}
 \todo{Nasazeni - Cisco Good Integration}
 
+\section{Síťová infrastruktura nutná k nasazení navrženého řešení pro notebooky}
+Navržené řešení neklade zvýšené nároky na síťovou infrastrukturu. Jelikož se jedná o distribuovanou virtualizaci, není třeba zajistit vyšší kvalitu sítě než je běžné.
 
-\todo{Návrh dalších opatření}
-\todo{nastavení pravidel}
-\todo{určení kompenzací zaměstnanci vs kontraktoři}
-\todo{zákazy, směrnice smlouva}
+Pokud by však bylo přistoupeno k oddělení sítě pomocí SSL tunelů, pak by muselo dojít k navýšení kapacity sítě a případně nákupu dalšího nezbytného hardware jako jsou VPN koncentrátory, firewally, routery a podobně -- ne však nezbytně.
+
+Vzhledem k povaze BYOD notebooků se jeví jako nejlepší řešení připojení k internetu pomocí bezdrátové sítě podobného charakteru jaká je k dispozici pro hosty. Přístup do podnikové sítě pak bude zajištěn pomocí VPN. Každý obraz virtuálního stroje bude obsahovat VPN klienta Cisco AnyConnect pro kterého již KB vlastní licence.
+
+Cisco doporučuje \todo{cit design guide} odlišit tuto síť od sítě pro hosty několika vylepšeními. Je vhodné umožnit zaměstnancům zajistit si svépomocí přihlašovací údaje a rozšířit možnosti autentifikace o využití Microsoft Active Directory. Taktéž je vhodné narozdíl od síťě pro hosty zajistit vyšší kvalitu služby.
+
+Pro přihlášení k síti se využívá Cisco ISE Sponsor Portal. Po přihlášení je možné porovnat přihlašovací údaje s Active Directory. Taktéž je možné nastavit které skupiny uživatelů mohou udělovat přístupy a monitorovat kdo a kdy přístupy vytvořil. Je vhodné pro BYOD notebooky vytvořit vlastní zabezpečenou síť, viz obrázek \ref{CiscoCUWN}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=13cm]{img/CiscoCUWN}
+\caption{Návrh SSID pro BYOD s využitím technologie Cisco Unified Wireless Network}\label{CiscoCUWN}
+\end{figure}\todo{citovat Cisco design guide} 
+
+Oddělení IT Security však doporučuje nepoužívat bezdrátové sítě a využít stávající kabelovou síť a stávající proces připojování uživatelů s pomocí aplikace MAB Keeper. VLAN přidělená pro BYOD zařízení by poskytovala pouze připojení k internetu a skrze toto připojení by bylo s užitím VPN tunelováno připojení do vnitřní sítě. 
 
 
-%Zhodnoťte uskutečnitelnost řešení a analyzujte benefity a rizika spojená se zavedením navrženého konceptu.
-\section{Analýza navrženého řešení}
+
+\section{Návrh dalších opatření}\label{dalsi_opatreni}
+Další opatření jsou navžena dle sekce \ref{deloitte_aspekty}.
+
+Z hlediska způsobilosti zaměstnanců je navrženu hodnotit způsobilost zaměstnanců pro vstup do BYOD programu. Způsobilost zaměstnance by měl zhodnotit jeho nadřízený. Je nutné určit pro jaké případy jsou vlastní zařízení přípustná a pro jaké nikoliv. Pro zvýšení účinku programu je třeba vynutit vstup do BYOD programu všech, kteří již nyní svá vlastní zařízení k práci používají.
+
+Zaměstnancům využívajícím vlastní zařízení jako náhradu firemního zařízení je nutné vyplácet paušál jako náhradu a toto ošetřit v dodatku pracovní smlouvy. Toto neplatí pro kontraktory.
+
+
+Není možné podporovat každé BYOD zařízení. Proto se koncept podpory musí změnit na podporu služby. Je třeba zavést uživatelské fórum, na které budou odkázání uživatelé, kteří mají problémy se svými zařízeními, které spadají mimo rámec podpory služby. Je vhodné mít připraveno několik firemních zařízení k zapůjčení připravených jako náhradu pro účastníky BYOD programu s potíži, avšak nezaručovat poskytnutí této služby.
+
+Je třeba vyčlenit pracovníka IT oddělení zodpovědného za BYOD. Ten by měl spravovat návod s postupem pro začlenění zájemců do BYOD programu. Podrobnější školení není nutné.
+
+
+Je třeba zavést interní směrnici, která ošetří BYOD ve firmě. Je nutné zamezit využívání soukromých zařízení k soukromým účelům v pracovní době. Po náběhu BYOD programu je možné umožnit interními předpisy vstup do BYOD nejenom kontraktorům, ale také vlastním zaměstnancům. Momentálně je toto možné pouze na základě bezpečnostní výjimky. Vstup do BYOD programu ze strany zaměstnanců by měl být dobrovolný. 
+
+Při najímání kontraktorů je třeba brát v úvahu využití konceptu distribuované virtualizace v BYOD programu a tedy smluvně zaručit možnost provozování virtuálního stroje na pracovním zařízení najímaného pracovníka.
+
+Proces pro schvalování bezpečnostních výjimek je třeba zachovat z důvodu neočekávaných mezních případů. Využívání výjimek by však nemělo být možné pro případy užití, které se dají řešit pomocí zapojení do BYOD programu. Zároveň je třeba zachovat smlouvu o užívání vlastního zařízení a aktualizovat ji pro potřeby BYOD programu. Bezpečnostní dotazník a zaručení nadřízeného je díky navrženému BYOD programu z procesu připojování uživatelů s nefiremními zařízeními možné vypustit.
+
+\section{Návrh harmonogramu nasazení}
+\todo{harmonogram nasazeni}

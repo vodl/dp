@@ -19,11 +19,13 @@
 %Moje packages%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{todonotes}
 \usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{enumitem}
 
 % % list of acronyms
-% \usepackage[acronym,nonumberlist,toc,numberedsection=autolabel]{glossaries}
-% \iflanguage{czech}{\renewcommand*{\acronymname}{Seznam pou{\v z}it{\' y}ch zkratek}}{}
-% \makeglossaries
+\usepackage[acronym,nonumberlist,toc,numberedsection=autolabel]{glossaries}
+\iflanguage{czech}{\renewcommand*{\acronymname}{Seznam pou{\v z}it{\' y}ch zkratek}}{}
+\makeglossaries
 
 \newcommand{\tg}{\mathop{\mathrm{tg}}} %cesky tangens
 \newcommand{\cotg}{\mathop{\mathrm{cotg}}} %cesky cotangens
@@ -89,26 +91,23 @@
 	\input{texty/intro}\todo{napsat úvod}
 \end{introduction}
 
-\chapter{Bring your own device}
-\section{Cíl práce}
-
+\chapter{Charakteristika BYOD}\label{k1}
 \input{texty/BYODteorie}
-\input{texty/analyzaBYOD}
 
-
-\chapter{Analýza prostředí a požadavků}
+\chapter{Analýza prostředí a požadavků}\label{k2}
  \input{texty/analyzaKB}
+ 
+\chapter{Možné varianty řešení}\label{k3}
+ \input{texty/analyzaBYOD} 
+ \input{texty/vyberReseni}
 
-\chapter{Výběr nejvhodnější varianty}
-  \input{texty/vyberReseni}
-
-\chapter{Návrh řešení}
+\chapter{Návrh řešení}\label{k4}
   \input{texty/navrhReseni}
 
-\chapter{Vyhodnocení}
+\chapter{Vyhodnocení}\label{k5}
    \input{texty/vyhodnoceni}
 
-\begin{conclusion}
+\begin{conclusion}\label{k6}
 	%sem napište závěr Vaší práce
 	\input{texty/conclusion}
 \end{conclusion}
