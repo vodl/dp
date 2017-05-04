@@ -1,6 +1,5 @@
 %Analyzujte dostupná existující řešení BYOD, zejména z pohledu bezpečnosti.
-
-
+Tato kapitola se zaměřuje na analýzu existujících řešení na trhu. V první části jsou definovány různé pohledy na BYOD a to na základě vlastnictví zařízení, typů zařízení a způsobu přístupu do datové sítě. Dále jsou definovány známe technické řešení pro BYOD. Na základě vlastností známých řešení je odděleně zvolen vhodný přístup řešení pro notebooky a mobilní zařízení. Pro tyto přístupy jsou vyhodnoceni nejvýznamnější poskytovatelé. 
 
 
  \section{Různé pohledy na BYOD}
@@ -24,75 +23,75 @@
  Vlastní zařízení zaměstnanců. Není kontrolované a může představovat bezpečnostní riziko.
  
  \subsection{Rozdělení podle typu zařízení}
- \subsubsection{PC}\todo{zdroj http://www.intel.com/content/www/us/en/tech-tips-and-tricks/pc-vs-mac-the-big-debate.html}
- V užším slova smyslu se jedná o osobní počítače s operačním systémem Windows od firmy Microsoft. Windows je aktuálně nejrozšířenější operační systém pro korporátní zařízení. Systém je určený pro zařízení postavené na architektuře x86. Typicky se jedná o stolní počítače a notebooky. Podle statistiky StatCounter\todo{zdroj: http://gs.statcounter.com/os-market-share/mobile-tablet/czech-republic/} měl operační systém Windows v únoru 2017 90 procentní podíl na trhu operačních systémů pro desktopy podle počtu přístupů na web. Podle celosvětových statistik přístupů na web v souhrnu všech typů zařízení podle StatCounter má však Windows pouze 38,6 procenta přístupů a je zřejmý trend mezi běžnými uživateli v upřednostňování jiných zařízení na úkor PC.\todo{zdroj: http://tech.ihned.cz/internet/c1-65653000-android-predbehne-windows-jako-nejpouzivanejsi-system-na-webu-v-cesku-mu-brani-draha-data}  
+ \subsubsection{PC}%\todo{zdroj http://www.intel.com/content/www/us/en/tech-tips-and-tricks/pc-vs-mac-the-big-debate.html}
+ V užším slova smyslu se jedná o osobní počítače s operačním systémem Windows od firmy Microsoft, viz \cite{Intel_Mac_PC}. Windows je aktuálně nejrozšířenější operační systém pro korporátní zařízení. Systém je určený pro zařízení postavené na architektuře x86. Typicky se jedná o stolní počítače a notebooky. Podle statistiky StatCounter%\todo{zdroj: http://gs.statcounter.com/os-market-share/mobile-tablet/czech-republic/}
+ \cite{Statcounter1} měl operační systém Windows v únoru 2017 90 procentní podíl na trhu operačních systémů pro desktopy podle počtu přístupů na web. Podle celosvětových statistik přístupů na web v souhrnu všech typů zařízení podle StatCounter má však Windows pouze 38,6 procenta přístupů a je zřejmý trend mezi běžnými uživateli v upřednostňování jiných zařízení na úkor PC \cite{HNAndroid}.%\todo{zdroj: http://tech.ihned.cz/internet/c1-65653000-android-predbehne-windows-jako-nejpouzivanejsi-system-na-webu-v-cesku-mu-brani-draha-data}  
  
 \begin{figure}[h]
 \includegraphics[width=13cm]{img/StatCounter_Desktop}
-\caption{Statistika podílu operačních systémů pro desktopy v České republice podle přístupů na web. Převzato z \cite{http://gs.statcounter.com/os-market-share/mobile-tablet/czech-republic/}} 
+\caption{Statistika podílu operačních systémů pro desktopy v České republice podle přístupů na web. Převzato z \cite{Statcounter1}} 
 \centering
-\end{figure}\todo{citace}
+\end{figure}%\todo{citace}
  
  
  
- \subsubsection{Mac}\todo{zdroj http://www.apple.com/macos/what-is/}
- Počítač s operačním systémem MAC OS. Jedná se o proprietární operační systém pro počítače firmy Apple. Podle StatCounter je jeho podíl na trhu mezi desktopovými operačními systémy podle počtu přístupů na web v České republice necelých šest procent. Populární je zejména ve Spojených státech, kde se jeho podíl mezi desktopovými operačními systémy podle metodiky StatCounteru pohybuje okolo dvaceti procent.
+ \subsubsection{Mac}
+ Počítač s operačním systémem MAC OS \cite{AppleMacOS}. Jedná se o proprietární operační systém pro počítače firmy Apple. Podle StatCounter je jeho podíl na trhu mezi desktopovými operačními systémy podle počtu přístupů na web v České republice necelých šest procent. Populární je zejména ve Spojených státech, kde se jeho podíl mezi desktopovými operačními systémy podle metodiky StatCounteru pohybuje okolo dvaceti procent.
  
- \begin{figure}[h]
+\begin{figure}[h]
 \includegraphics[width=13cm]{img/StatCounter_Destop_USA}
-\caption{Statistika podílu operačních systémů pro desktopy v USA podle přístupů na web. Převzato z \cite{http://gs.statcounter.com/os-market-share/mobile-tablet/czech-republic/}} 
+\caption{Statistika podílu operačních systémů pro desktopy v USA podle přístupů na web. Převzato z \cite{Statcounter1}} 
 \centering
-\end{figure}\todo{citace}
+\end{figure}%\todo{citace}
  
  
  \subsubsection{Chytrý telefon či tablet}
- Podle společnosti Gartner \todo{citace http://www.gartner.com/it-glossary/smartphone/} je chytrý telefon definován jako mobilní komunikační zařízení používající identifikovatelný otevřený operační systém. Tento systém je podporován aplikacemi třetích stran od komunity vývojářů. Aplikace třetích stran mohou být instalovány nebo odstraněny a mohou být vytvořeny přímo pro operační systém zařízení a aplikační programové rozhraní, případně pro oddělenou vrstvu jakou může být například Java. Operační systém musí podporovat multitaskingové prostředí a uživatelské rozhraní, které dokáže obsloužit více aplikací najednou. Například zobrazení emailu během přehrávání hudby.
+ Podle společnosti Gartner \cite{GartnerSmartphone} je chytrý telefon definován jako mobilní komunikační zařízení používající identifikovatelný otevřený operační systém. Tento systém je podporován aplikacemi třetích stran od komunity vývojářů. Aplikace třetích stran mohou být instalovány nebo odstraněny a mohou být vytvořeny přímo pro operační systém zařízení a aplikační programové rozhraní, případně pro oddělenou vrstvu jakou může být například Java. Operační systém musí podporovat multitaskingové prostředí a uživatelské rozhraní, které dokáže obsloužit více aplikací najednou. Například zobrazení emailu během přehrávání hudby.
  
- Obecněji se jedná mobilní zařízení s možností instalace aplikací. V současné době jsou nejpopulárnější zařízení s operačním systémem Android od firmy Google a iOS od firmy Apple. V České republice je podle metodiky měření společnosti StatCounter pro únor 2017 nejpopulárnější operační systém Android s podílem 68 procent. Operační systém iOS je na drůhém místě s podílem 26 procent. Více než jednoprocentní podíl má již pouze Windows s necelými čtyřmi procenty. \todo{citace http://tech.ihned.cz/internet/c1-65653000-android-predbehne-windows-jako-nejpouzivanejsi-system-na-webu-v-cesku-mu-brani-draha-data a statcounter}
+ Obecněji se jedná mobilní zařízení s možností instalace aplikací. V současné době jsou nejpopulárnější zařízení s operačním systémem Android od firmy Google a iOS od firmy Apple. V České republice je podle metodiky měření společnosti StatCounter pro únor 2017 nejpopulárnější operační systém Android s podílem 68 procent. Operační systém iOS je na drůhém místě s podílem 26 procent. Více než jednoprocentní podíl má již pouze Windows s necelými čtyřmi procenty \cite{HNAndroid}. 
  
  \begin{figure}[h]
 \includegraphics[width=13cm]{img/StatCounter_MobileBar}
-\caption{Statistika podílu operačních systémů pro desktopy v České republice podle přístupů na web. Převzato z \cite{http://gs.statcounter.com/os-market-share/mobile-tablet/czech-republic/}} 
+\caption{Statistika podílu operačních systémů pro mobilní zařízení v České republice podle přístupů na web. Převzato z \cite{Statcounter1}} 
 \centering
-\end{figure}\todo{citace}
+\end{figure}%\todo{citace}
  
 Celosvětově je zřejmá rostoucí obliba mobilních zařízení mezi uživateli a to především na úkor klasických PC s operačním systémem Windows. Vzhledem k postupné změně návyků uživatelů je třeba, aby firemní prostředí na tento trend vhodně reagovalo. 
 
 
 \begin{figure}[h]
 \includegraphics[width=13cm]{img/StatCounter_VyvojVse}
-\caption{Statistika podílu všech operačních systémů pro desktopy v České republice podle přístupů na web. Převzato z \cite{http://gs.statcounter.com/os-market-share/mobile-tablet/czech-republic/}} 
+\caption{Statistika podílu všech operačních systémů pro desktopy v České republice podle přístupů na web. Převzato z \cite{Statcounter1}} 
 \centering
-\end{figure}\todo{citace}
+\end{figure}%\todo{citace}
 
 \begin{figure}[h]
 \includegraphics[width=13cm]{img/StatCounter_All_Worldwide}
-\caption{Statistika podílu všech operačních systémů celosvětově podle přístupů na web. Převzato z \cite{http://gs.statcounter.com/os-market-share/}} 
+\caption{Statistika podílu všech operačních systémů celosvětově podle přístupů na web. Převzato z \cite{Statcounter2}} 
 \centering
-\end{figure}\todo{citace}
+\end{figure}%\todo{citace}
  
 Od těchto zařízení se nepředpokládá nutnost přístupu k podnikovým aplikacím, ale je vyžadován okamžitý přístup k emailům, kontaktům či dokumentům a to nezávisle na místě použití.
 
-Report od společnosti Nokia Thread Intelligence Lab \todo{citovat http://resources.alcatel-lucent.com/asset/193174  http://www.nokia.com/en\_int/news/releases/2016/03/01/nokia-malware-report-shows-smartphones-now-account-for-60-of-infections-in-the-mobile-network}, který zmonitoroval aktivitu malware v sítích mobilních operátorů mezi lety 2012 a 2015 měly 60 \% veškeré aktivity malware v mobilních sítích na svědomí chytré telefony, zbytek šel na vrub Windows PC.
+Report od společnosti Nokia Thread Intelligence Lab %\todo{citovat http://resources.alcatel-lucent.com/asset/193174  http://www.nokia.com/en\_int/news/releases/2016/03/01/nokia-malware-report-shows-smartphones-now-account-for-60-of-infections-in-the-mobile-network}
+\cite{Nokia2, Nokia1}, který zmonitoroval aktivitu malware v sítích mobilních operátorů mezi lety 2012 a 2015 měly 60 \% veškeré aktivity malware v mobilních sítích na svědomí chytré telefony, zbytek šel na vrub Windows PC.
 
 V prosinci 2015 vykazovalo známky napadení škodlivým software 0,3 \% všech chytých telefonů. Nejvíce napadení zaznamenali zařízení s operačním systémem Android, ovšem na seznam s dvaceti nejčastěji se vyskytujícími druhy školivého software so dostali i dva zástupci pro operašní systém iOS (XcodeGhost a Flexispy). V říjnu 2015 bylo 6 \% všech napadených zařízení značky iPhone.
  
  
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  \subsection{Rozdělení podle typu přístupu do datové sítě}
- \subsubsection{Ethernet}\todo{citace http://www.pcmag.com/encyclopedia/term/42781/ethernet}
- Jedná se o pevné připojení do korporátní sítě pomocí kabelu. Je vhodné pro firemní počítače, není vhodné pro zařízení typu mobilní telefon či tablet.
+ \subsubsection{Ethernet}%\todo{citace http://www.pcmag.com/encyclopedia/term/42781/ethernet}
+ Jedná se o pevné připojení do korporátní sítě pomocí kabelu \cite{pcmagEthernet}. Je vhodné pro firemní počítače, není vhodné pro zařízení typu mobilní telefon či tablet.
  
- Je definované ve standardu IEEE 802.3 \todo{Naflakat sem vic nesmyslu ze standardu}
+ Je definované ve standardu IEEE 802.3.% \todo{Naflakat sem vic nesmyslu ze standardu}
  
- \subsubsection{Wi-Fi} \todo{http://www.pcmag.com/encyclopedia/term/54444/wi-fi}
+ \subsubsection{WiFi} %\todo{cit %http://www.pcmag.com/encyclopedia/term/54444/wi-fi }
  
- Bezdrátové připojení pomocí Wi-Fi sítí. Jedná se o standardní technologii pro bezdrátové sítě WLAN. Tento typ připojení je vhodný jak pro přenosné počítače, tak pro mobilní telefony či tablety.
+ Bezdrátové připojení pomocí Wi-Fi sítí. Jedná se o standardní technologii pro bezdrátové sítě WLAN \cite{pcmagWifi}. Tento typ připojení je vhodný jak pro přenosné počítače, tak pro mobilní telefony či tablety. WiFi je definovaná standardem IEEE 802.11
  
- Wi-Fi je definovaná standardem IEEE 802.11
- 
- \subsubsection{VPN} \todo{citace http://www.cisco.com/c/en/us/about/press/internet-protocol-journal/back-issues/table-contents-18/what-is-a-vpn.html}
- Virtual private network, čili vzdálené připojení do firemní sítě. Hlavním smyslem VPN je vytvořit soukromou síť pomocí tunelování a nebo šifrování skrze veřejný internet tak, aby uživatelé mohli vzdáleně přistupovat ke službám dostupným pouze zevnitř sítě.
+ \subsubsection{VPN} %\todo{citace %http://www.cisco.com/c/en/us/about/press/internet-protocol-journal/back-issues/table-contents-18/what-is-a-vpn.html}
+ Virtual private network, čili vzdálené připojení do firemní sítě. Hlavním smyslem VPN je vytvořit soukromou síť pomocí tunelování a nebo šifrování skrze veřejný internet tak, aby uživatelé mohli vzdáleně přistupovat ke službám dostupným pouze zevnitř sítě \cite{ciscoJournal}.
  
  
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -124,7 +123,7 @@ V prosinci 2015 vykazovalo známky napadení škodlivým software 0,3 \% všech 
  \subsection{Rozlišení na úrovni sítě}
  Použitím Network Access Controll neboli NAC je možné spravovat přístup zařízení do sítě. Je možné nastavit autentifikační kontroly a další bezpečnostní politiky, které musí zařízení splňovat aby bylo do sítě vpuštěno. 
  
- Společnost Gartner identifikuje několik funkcí, které tato řešení nabízejí. \todo{citace https://www.gartner.com/doc/reprints?id=1-3I8W2V2\&ct=160922\&st=sb}
+ Společnost Gartner identifikuje několik funkcí, které tato řešení nabízejí \cite{GartnerNAC}. %\todo{citace https://www.gartner.com/doc/reprints?id=1-3I8W2V2\&ct=160922\&st=sb}
  Politiky mohou pojmout různé fukce jako například autentifikaci zařízení, autorizaci uživatele, lokaci, čas či přístup k aplikacím a zdrojům.
  
  Dále je možné posoudit stav zařízení z hlediska aktuálnosti systému a antivirových definic co se týče zařízení s Windows, nebo přítomnost EMM, viz \ref{EMM},  na mobilních zařízení.
@@ -142,7 +141,7 @@ Gartner ve své studii zmiňuje následující prudukty: Aruba ClearPass, Aucone
  
  Mezi hlavní nevýhody patří problémy s periferiemi jako např. tiskárny či nutnost stálé a kvalitní konektivity.
  
-  Nejznámějšími poskytovateli virtualizace aplikací jsou Citrix XenApp, Citrix XenDesktop, VMware Horizon, Dell vWorkspace, and Microsoft RDSH\todo{překlad}
+  Nejznámějšími poskytovateli virtualizace aplikací jsou Citrix XenApp, Citrix XenDesktop, VMware Horizon, Dell vWorkspace, and Microsoft RDSH.%\todo{překlad}
  
  
  \subsubsection{EMM/EMS}\label{EMM}
@@ -157,19 +156,20 @@ Gartner ve své studii zmiňuje následující prudukty: Aruba ClearPass, Aucone
      \item umožňují vzdálenou podporu zařízení pro IT oddělení
  \end{itemize}
  
-Výzkum společnosti J Gold Associates z roku 2016 \todo{citace http://jgoldassociates.com/Technology\_Brief/Technology\_Brief\_April\_2016.pdf} ukazuje, že firmy v drtivé většině nenasazují všechny funkce, které EMM řešení nabízejí. Nejpoužívanější funkce EMM jsou vypsány na obrázku (\ref{funkceEMM}) 
+Výzkum společnosti J Gold Associates z roku 2016 \cite{JBBrief}%\todo{citace http://jgoldassociates.com/Technology\_Brief/Technology\_Brief\_April\_2016.pdf}
+ukazuje, že firmy v drtivé většině nenasazují všechny funkce, které EMM řešení nabízejí. Nejpoužívanější funkce EMM jsou vypsány na obrázku (\ref{funkceEMM}) 
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=13cm]{img/funkceEMM}
-\caption{Které komponenty EMM řešení organizace zapojené do průzkumu aktuáně používají? } 
+\caption{Které komponenty EMM řešení organizace zapojené do průzkumu aktuáně používají? Převzato z \cite{JBBrief}} 
 \end{figure}\label{funkceEMM}
-\todo{citace http://jgoldassociates.com/Technology\_Brief/Technology\_Brief\_April\_2016.pdf}
+%\todo{citace http://jgoldassociates.com/Technology\_Brief/Technology\_Brief\_April\_2016.pdf}
  
  
  
   \subsection{MDM}
- Mobile device management je software pro správu mobilního zařízení. Je podmnožinou EMM. Mezi základní funkce tohoto software patří podle \todo{citace: FEL BYOD vosykto} patří:
+ Mobile device management je software pro správu mobilního zařízení. Je podmnožinou EMM. Mezi základní funkce tohoto software podle \cite{systemOnline} patří:
  \begin{itemize}
      \item Automatické nastavení mobilního zařízení. Umožňuje IT oddělení nastavit zařízení podle firemních potřeb. To zahrnuje instalaci bezpečnostních certifikátů, nastavení uživatelských účtů či dalších nastavení umožňující přístup k firemní síti.
      \item Možnost vzdáleného vymazání. Umožňuje vzdáleně vymazat data tak, aby nebyly dostupné. To je užitečné v případě ztráty či krádeže zařízení, nebo po ukončení pracovního poměru se zaměstnancem.
@@ -184,7 +184,7 @@ Výzkum společnosti J Gold Associates z roku 2016 \todo{citace http://jgoldasso
  %\missingfigure{Magic quarter pro MDM}
  
  \subsection{MAM} 
- Mobile application management. MAM je též podmnožinou EMM. Narozdíl od MDM nespravuje zařízení jako celek, ale pouze podnikové aplikace. Tyto aplikace jsou získávány přes speciální obchod s aplikacemi. Mezi hlavní funkce MAM patří:
+ Mobile application management. MAM je též podmnožinou EMM. Narozdíl od MDM nespravuje zařízení jako celek, ale pouze podnikové aplikace. Tyto aplikace jsou získávány přes speciální obchod s aplikacemi. Podle \cite{MAMcitace} mezi hlavní funkce MAM patří:
  \begin{itemize}
      \item Podnikový obchod s aplikacemi. Umožňuje nasazování jak vlastních tak komerčních aplikací pro potřeby businessu.
      \item Podporu pro správu a distribuci aplikací s užitím API operačního systému či hromadného nákupu aplikací.
@@ -202,12 +202,12 @@ Výzkum společnosti J Gold Associates z roku 2016 \todo{citace http://jgoldasso
  \end{itemize}
  
   
-\begin{figure}[h]
-\centering
-\includegraphics[width=7cm]{img/MAM-Offering}
-\caption{Gartner Magic quadrant. Převzato z } 
-\label{MAM:nacrt}
-\end{figure}\todo{ citace https://www.ibm.com/developerworks/community/blogs/mobileblog/entry/got\_mam\_mobile\_application\_management\_in\_your\_2013\_mobile\_menu25?lang=en}
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=7cm]{img/MAM-Offering}
+%\caption{Gartner Magic quadrant. Převzato z } 
+%\label{MAM:nacrt}
+%\end{figure}\todo{ citace https://www.ibm.com/developerworks/community/blogs/mobileblog/entry/got\_mam\_mobile\_application\_management\_in\_your\_2013\_mobile\_menu25?lang=en}
 
 
 \subsection{MCM} 

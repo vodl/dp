@@ -23,12 +23,12 @@
 \usepackage{enumitem}
 
 % % list of acronyms
-\usepackage[acronym,nonumberlist,toc,numberedsection=autolabel]{glossaries}
-\iflanguage{czech}{\renewcommand*{\acronymname}{Seznam pou{\v z}it{\' y}ch zkratek}}{}
-\makeglossaries
+%\usepackage[acronym,nonumberlist,toc,numberedsection=autolabel]{glossaries}
+%\iflanguage{czech}{\renewcommand*{\acronymname}{Seznam pou{\v z}it{\' y}ch zkratek}}{}
+%\makeglossaries
 
-\newcommand{\tg}{\mathop{\mathrm{tg}}} %cesky tangens
-\newcommand{\cotg}{\mathop{\mathrm{cotg}}} %cesky cotangens
+%\newcommand{\tg}{\mathop{\mathrm{tg}}} %cesky tangens
+%\newcommand{\cotg}{\mathop{\mathrm{cotg}}} %cesky cotangens
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % ODTUD DAL VSE ZMENTE
@@ -40,20 +40,24 @@
 \authorFN{Dlápal} %příjmení autora
 \authorWithDegrees{Bc. Vojtěch Dlápal} %jméno autora včetně současných akademických titulů
 \supervisor{Ing. Pavel Krejčí}
-\acknowledgements{Doplňte, máte-li komu a za co děkovat. V~opačném případě úplně odstraňte tento příkaz.}
-\abstractCS{V~několika větách shrňte obsah a přínos této práce v~češtině. Po přečtení abstraktu by se čtenář měl mít čtenář dost informací pro rozhodnutí, zda chce Vaši práci číst.}
-\abstractEN{Sem doplňte ekvivalent abstraktu Vaší práce v~angličtině.}
+\acknowledgements{Děkuji technickým konzultantům této práce Viktoru Fukovi a Tomáši Prjachovi za to, že mi byli trpělivými průvodci labyrintem korporátního světa.}
+\abstractCS{
+Problematika BYOD neboli používání zařízení mimo vlastnictví firmy k pracovním úkolům je čím dál více aktuální. Tato práce analyzuje a řeší BYOD s ohledem na potřeby vybrané bankovní instituce. Vzhledem ke specifikům bankovního prostředí analyzuje související hrozby a navrhuje konkrétní technická opatření pro zvýšení bezpečnosti. %Návrh řešení pro notebooky i mobilní telefony a tablety je vyhodnocen na základě zpětné vazby od partnerské společnosti.
+%V~několika větách shrňte obsah a přínos této práce v~češtině. Po přečtení abstraktu by se čtenář měl mít čtenář dost informací pro rozhodnutí, zda chce Vaši práci číst.
+}
+\abstractEN{The issue of BYOD which means use of devices not in company's ownership for working purposes is nowadays more and more current. This thesis analyzes and deals with BYOD with regard to the needs of a selected banking institution. In view of the specifics of the banking environment, it analyzes the related threats and proposes specific technical measures to increase security. %The proposal for solutions for laptops and mobile phones and tablets is evaluated on the basis of feedback from the partner company.
+}
 \placeForDeclarationOfAuthenticity{V~Praze}
 \declarationOfAuthenticityOption{4} %volba Prohlášení (číslo 1-6)
-\keywordsCS{Nahraďte seznamem klíčových slov v češtině oddělených čárkou.}
-\keywordsEN{Nahraďte seznamem klíčových slov v angličtině oddělených čárkou.}
+\keywordsCS{BYOD, Bezpečnost IT, VDI, EMM, MAM, MDM, VMware Horizon FLEX, BlackBerry Enterprise Mobility Suite}
+\keywordsEN{BYOD, IT Security, VDI, EMM, MAM, MDM, VMware Horizon FLEX, BlackBerry Enterprise Mobility Suite}
 
 \begin{document}
 
-\todo{doplnit podekovani}
-\todo{napsat abstrakt}
-\todo{prelozit abstrakt}
-\todo{klicova slova}
+%\todo{doplnit podekovani}
+%\todo{napsat abstrakt}
+%\todo{prelozit abstrakt}
+%\todo{klicova slova}
 
 % \newacronym{CVUT}{{\v C}VUT}{{\v C}esk{\' e} vysok{\' e} u{\v c}en{\' i} technick{\' e} v Praze}
 % \newacronym{FIT}{FIT}{Fakulta informa{\v c}n{\' i}ch technologi{\' i}}
@@ -79,7 +83,7 @@
 
 %Zhodnoťte uskutečnitelnost řešení a analyzujte benefity a rizika spojená se zavedením navrženého konceptu.
 
-\listoftodos[Co je treba udelat]
+%\listoftodos[Co je treba udelat]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -88,7 +92,7 @@
 
 \begin{introduction}
 	%sem napište úvod Vaší práce
-	\input{texty/intro}\todo{napsat úvod}
+	\input{texty/intro}
 \end{introduction}
 
 \chapter{Charakteristika BYOD}\label{k1}
@@ -107,13 +111,14 @@
 \chapter{Vyhodnocení}\label{k5}
    \input{texty/vyhodnoceni}
 
-\begin{conclusion}\label{k6}
+\begin{conclusion}
 	%sem napište závěr Vaší práce
 	\input{texty/conclusion}
 \end{conclusion}
 
 
 \bibliographystyle{csn690}
+%\bibliography{ref}
 \bibliography{mybibliographyfile}
 
 \appendix
