@@ -1,70 +1,68 @@
 %Vyberte nejvhodnější variantu na trhu dostupného řešení a konfrontujte ji s praxí ve vybrané organizaci. 
 \section{Výběr nejvhodnější varianty}
 
-Předchozí analýzy prokázaly, že neexistuje řešení, které by dokázalo zastřešit všechny případy užití vlastních zařízení ve firemním prostředí. Proto tato práce bude dále dělit BYOD podle typu zařízení a to na mobilní zařízení jako jsou mobilní telefony či tablety a notebooky.
+Předchozí analýzy prokázaly, že neexistuje řešení, které by dokázalo zastřešit všechny případy užití vlastních zařízení ve firemním prostředí. Proto tato práce bude dále dělit BYOD podle typu zařízení, a to na mobilní zařízení jako jsou mobilní telefony či tablety a notebooky.
 
 \section{Výběr řešení pro mobilní telefony a tablety}
 
 %\todo{Proc je potreba EMM? Viz specifikace projektu Good}
 Podle analýzy \ref{identifikovanePotreby} uživatelé žádají ze svých osobních mobilních telefonů a tabletů přístup k emailům a ke kalendáři. Firma se naopak snaží oddělit firemní data od soukromých tak, aby nad nimi měla kontrolu. Tyto požadavky splňují řešení EMM.  
 
-Trh nástroji v posledních letech výrazně rostl, zároveň se však konsolidoval \cite{IDC2}. %\todo{citace https://theictscoop.com/airwatch-consolidates-emm-leadership-in-latest-idc-report-6622602febde   }
-V grafech \ref{EMM:podil2015} a \ref{EMM:podil2016} je vidět nárůst trhu s EMM mezi lety 2014 a 2015 z 1,4 miliardy dolarů na 1,8 miliardy dolarů, tedy o 26,9 \%. Zároveň je vidět zvyšování tržního podílu velkých hráču. Výrazný vliv měla také akvizice společnosti Good Technology společností BlackBerry.
+Trh s nástroji v posledních letech výrazně rostl, zároveň se však konsolidoval \cite{IDC2}. V grafech \ref{EMM:podil2015} a \ref{EMM:podil2016} je patrný nárůst trhu s EMM mezi lety 2014 a 2015 z 1,4 miliardy dolarů na 1,8 miliardy dolarů, tedy o 26,9 \%. Zároveň je vidět zvyšování tržního podílu velkých hráču. Výrazný vliv měla také akvizice společnosti Good Technology společností BlackBerry.
 
  
 \begin{figure}[h!]
 \includegraphics[width=13cm]{img/IDC_EMM}
-\caption{Podíl na trhu jednotlivých poskytovatelů EMM v roce 2014 podle IDC. Převzato z \cite{IDC1}} 
+\caption{Podíl jednotlivých poskytovatelů EMM na trhu v roce 2014 podle IDC. Převzato z \cite{IDC1}.} 
 \label{EMM:podil2015}
 \centering
-\end{figure}%\todo{citace http://www.idc.com/getdoc.jsp?containerId=US40430516  }
+\end{figure}
 
-  \begin{figure}[h!]
+\begin{figure}[h!]
 \includegraphics[width=13cm]{img/IDC2016}
-\caption{Podíl na trhu jednotlivých poskytovatelů EMM v roce 2015 podle IDC. Převzato z \cite{IDC0}} 
+\caption{Podíl jednotlivých poskytovatelů EMM na trhu v roce 2015 podle IDC. Převzato z \cite{IDC0}.} 
 \label{EMM:podil2016}
 \centering
-\end{figure}%\todo{citace https://theictscoop.com/airwatch-consolidates-emm-leadership-in-latest-idc-report-6622602febde   }
+\end{figure}
 
 Podle magazínu CIOReview \cite{CIOReview} bylo v roce 2016 pro BYOD nejslibnějších následujících dvacet poskytovatelů softwaru: Accelion, API Systems, Cyber adAPT, Ericom Software, Excelerate Systems, GSG Telco, High Point Solutions, LANDESK Software,  Mathe, MobileIron, MobilityLab, Movius, RES Software, Sirama Consulting, Skycure, Storgrid, Tangoe, Tyfone, VmWare AirWatch, Zix Corporation.
 
-Některé z nich jsou však příliš úzce zaměřené, či jsou pouze minoritními hráči na trhu. Analýza společnosti Gartner \cite{Gartner_EMM_2016} z roku 2016 pro EMM rozděluje jednotlivé poskytovatele dle jejich postavení na trhu a zároveň zohledňuje jejich schopnost zohlednit v produktu aktuální požadavky trhu a nasměrování produktu k budoucím potřebám zákazníků. Tyto kritéria shrnuje společnost Gartner jako osy "schopnost vykonat" a "úplnost vize" ve svém grafu nazývaném magic quadrant. \ref{EMM:quadrant}
+Některé z nich jsou však příliš úzce zaměřené, či jsou pouze minoritními hráči na trhu. Analýza společnosti Gartner \cite{Gartner_EMM_2016} z roku 2016 pro EMM rozděluje jednotlivé poskytovatele dle jejich postavení na trhu a zároveň hodnotí jejich schopnost zohlednit v produktu aktuální požadavky trhu a nasměrování produktu k budoucím potřebám zákazníků. Tato kritéria shrnuje společnost Gartner jako osy "schopnost vykonat" a "úplnost vize" ve svém grafu nazývaném magic quadrant \ref{EMM:quadrant}.
 
 
 
- \begin{figure}[h!]
+\begin{figure}[h!]
 \includegraphics[width=13cm]{img/Gartner_EMM}
 \caption{Gartner Magic quadrant. Převzato z \cite{Gartner_EMM_2016}} 
 \label{EMM:quadrant}
 \centering
-\end{figure}%\todo{citace}
- %\missingfigure{magic quarter}
+\end{figure}
  
 Následující společnosti se nacházejí v kvadrantu lídrů:
 
 
 \subsubsection{VMWare Airwatch}
-VMWare koupil společnost AirWatch v roce 2014, viz \cite{VmBuyAir}. Od té doby VMWare zařadil tento EMM do svého porfolia a postupně jej integruje s dalšími produkty jakou jsou jeho nástroje pro IAM (Identity and Access Management) a SDN (software-defined networking). AirWatch nabízí širokou podporu pro nástroje třetích stran a je jeden ze zakládajících členů standardu AppConfig. VMWare AirWatch je vhodný pro společnosti, které hledají rozsáhlou funkcionalitu s podporou mnoha platforem.
+VMWare koupil společnost AirWatch v roce 2014, viz \cite{VmBuyAir}. Od té doby VMWare zařadil tento EMM do svého porfolia a postupně jej integruje s dalšími produkty jako jsou jeho nástroje pro IAM (Identity and Access Management) a SDN (software-defined networking). AirWatch nabízí širokou podporu pro nástroje třetích stran a je jedním ze zakládajících členů standardu AppConfig. VMWare AirWatch je vhodný pro společnosti, které hledají rozsáhlou funkcionalitu s podporou mnoha platforem.
 
 Podle \cite{Gartner_EMM_2016} byla prokázána nasaditelnost do rozsáhlých prostředí a snadná administrace. Na druhou stranu se objevily problémy s technickou podporou a také nutnost použít řešení od třetí strany pro PIM (Person information management).
 
 
 
 \subsubsection{MobileIron}
-MobileIron je veřejně obchodovatelná společnost (NASDAQ: MOBL), která jako jedna z posledních soustředí pouze na svůj EMM produkt. Nabízí však širokou podporu aplikací třetích stran a je jedním ze zakládajících členů standardu AppConfig. Společnost je ceněna za schopnost přinášet nové funkce na všechny tři hlavní mobilní platformy a plnění amerických bezpečnostních certifikací. Jedná se o produkt, který nabízí mnoho funkcí, , škálovatelnost, stabilitu a integraci s dalšími aplikacemi.
+MobileIron je veřejně obchodovatelná společnost (NASDAQ: MOBL), která se jako jedna z posledních soustředí pouze na svůj EMM produkt. Nabízí však širokou podporu aplikací třetích stran a je jedním ze zakládajících členů standardu AppConfig. Společnost je ceněna pro schopnost přinášet nové funkce na všechny tři hlavní mobilní platformy a plnění amerických bezpečnostních certifikací. Jedná se o produkt, který nabízí mnoho funkcí, škálovatelnost, stabilitu a integraci s dalšími aplikacemi.
 
-Řešení nabízí vytváření nástroj pro reporting, pokročilou integraci se SIEM (security information and event management) řešeními třetích stran či správu z mobilního zařízení. Získává kladné ohlasy na svou stabilitu, použitelnost, škálovatelnost a rozsáhlý ekosystém přidružených aplikací AppConnect. MobileIron se drží mezi prvními při nasazování pro nové verze operačních systému.
+Řešení nabízí nástroj pro reporting, pokročilou integraci se SIEM (security information and event management) řešeními třetích stran či správu z mobilního zařízení. Získává kladné ohlasy na svou stabilitu, použitelnost, škálovatelnost a rozsáhlý ekosystém přidružených aplikací AppConnect. MobileIron se drží mezi prvními při nasazování pro nové verze operačních systému.
 
-Na druhou stranu podle \cite{Gartner_EMM_2016} jsou známé případy, kdy zákazníci měli obtíže získat technickou podporu, aplikace Apps@Work nabízejí zastaralý uživatelský zážitek a zároveň existuje nejistota ohledně budoucnosti firmy vzhledem ke změnám ve vrcholém managementu.
+Na druhou stranu podle \cite{Gartner_EMM_2016} jsou známé případy, kdy zákazníci měli potíže získat technickou podporu. Aplikace Apps@Work nabízejí zastaralý uživatelský zážitek a zároveň existuje nejistota ohledně budoucnosti firmy vzhledem ke změnám ve vrcholném managementu.
 
 \subsubsection{Citrix}
-Řešení od společnosti Citrix se skládá z produktů NetScaler, ShareFile a Xen Mobile. Je silné především díky balíku kontejnerizovaných aplikací Worx. ShareFile je kvalitní EFSS (Enterprise file synchronization and sharing) řešení. Obsahuje též uživatelsky přívětivé DLP (Data loss prevention).XenMobile je vhodný pro společnosti s existující infrastrukturou od Citrixu nebo pro ty co požadují široké spektrum funkcí.
+Řešení od společnosti Citrix se skládá z produktů NetScaler, ShareFile a Xen Mobile. Je silné především díky balíku kontejnerizovaných aplikací Worx. ShareFile je kvalitní EFSS (Enterprise file synchronization and sharing) řešení. Obsahuje též uživatelsky přívětivé DLP (Data loss prevention). XenMobile je vhodný pro společnosti s existující infrastrukturou od Citrixu nebo pro ty, jež požadují široké spektrum funkcí.
 
-Společnost Gartner zaznamenala probléby u nasazení XenMobile jako SaaS (Software as a service) u velkých projektů (tj. více než 20000 zařízení) \cite{Gartner_EMM_2016}. Přestože XenMobile nabízí možnost virtualizace Windows aplikací pro mobilní zařízení, použitelnost je na na mobilních zařízeních sporná, vzhledem k dotykové povaze ovládání uživatelského rozhraní. 
+Společnost Gartner zaznamenala problémy u nasazení XenMobile jako SaaS (Software as a service) u velkých projektů (tj. více než 20000 zařízení) \cite{Gartner_EMM_2016}. Přestože XenMobile nabízí možnost virtualizace Windows aplikací pro mobilní zařízení, použitelnost je na na mobilních zařízeních sporná, vzhledem k dotykové povaze ovládání uživatelského rozhraní. 
 
 
 \subsubsection{IBM}
-IBM nabízí komletní malík EMM nástrojů MaaS360. Podporuje všechny významné operační systémy, nabízí dobrou spolupráci s dalším bezpečnostním software od IBM. Jedná se o produkt, který má velký záběr co se týče funkcionality, ale přitom je snadno nasaditelný, viz \cite{Gartner_EMM_2016}.
+IBM nabízí kompletní balík EMM nástrojů MaaS360. Podporuje všechny významné operační systémy, nabízí dobrou spolupráci s dalším bezpečnostním software od IBM. Jedná se o produkt, který má velký záběr, co se týče funkcionality, ale přitom je snadno nasaditelný, viz \cite{Gartner_EMM_2016}.
 
 
 
@@ -73,62 +71,61 @@ BlackBerry nyní prodává svůj nástroj jako Good Secure EMM Suite. Skládá s
 
 Podle agentury Gartner je Good Secure EMM Suite vhodný pro organizace s přísnými požadavky na bezpečnost či působící v regulovaném sektoru. Těm nabízí silnou sadu nástrojů pro ochranu. Zároveň existuje silná podpora pro starší verze software od BlackBerry. Nástroj Good Work nabízí jeden z nejlepších zabezbečených Personal information manager (PIM) nástrojů. Podpora od BlackBerry získává mnoho kladných hodnocení od zákazníků. 
 
-Vícevrstvá cloudová verze produktu BES12 umisťuje data do datacenter ve dvou lokacích a to Kanady a Nizozemí. To by mohl být pro některé bezpečnostní politiky problém. Zároveň u balíku od společnosti BlackBerry dochází k roztříštěnosti služeb mezi jednotlivými produkty.
+Vícevrstvá cloudová verze produktu BES12 umisťuje data do datacenter ve dvou lokacích, a to Kanadě a Nizozemsku. To by mohl být pro některé bezpečnostní politiky problém. Zároveň u balíku od společnosti BlackBerry dochází k roztříštěnosti služeb mezi jednotlivými produkty.
 
 
 Další řešení:
 
 \subsubsection{Cisco}
-Cisco se dostalo mezi společnosti nabízející MDM software akvizicí společnosti Meraki v roce 2012 \cite{CiscoBuyMeraki}. Kromě řešení pro Android a iOS nabízí také podporu pro Windows a MAC OS X. Nabízí hlubokou integraci do síťové ingrastruktury. Správa produktu nabízí velice jednoduché a přívětivé uživatelské rozhraní. Cenově se jedná o levnější řešení než většina konkurence.
+Cisco se dostalo mezi společnosti nabízející MDM software akvizicí společnosti Meraki v roce 2012 \cite{CiscoBuyMeraki}. Kromě řešení pro Android a iOS nabízí také podporu pro Windows a MAC OS X. Nabízí hlubokou integraci do síťové ingrastruktury. Správa produktu nabízí velice jednoduché a přívětivé uživatelské rozhraní. Cenově se jedná o levnější řešení než u většiny konkurentů.
 
 Výhody integrace do síťové infrastruktury je možné využít pouze v případě, že organizace používá sítovou infrastrukturu od Cisco/Meraki. Meraki neobsahuje všechny součásti EMM, soutředí se pouze na MDM.
 
 
 
 \subsubsection{Microsoft}
-EMM produkt od Microsoftu se nazývá Enterprise Mobility Suite. Skládá se z Microsoft Intune, Azure Active Directory Premium, Advanced Threat Analytics a Azure Rights Management. MDM a MAM služby jsou soustředěny v Microsoft Intune. Toto řešení je nabízeno pouze služba v cloudu. Řešení od Microsoftu je vhodné pro společnosti, které nemají vysoké nároky na správu a používají Office 365 nebo Azure Active Directory.
+EMM produkt od Microsoftu se nazývá Enterprise Mobility Suite. Skládá se z Microsoft Intune, Azure Active Directory Premium, Advanced Threat Analytics a Azure Rights Management. MDM a MAM služby jsou soustředěny v Microsoft Intune. Toto řešení je nabízeno pouze jako služba v cloudu. Řešení od Microsoftu je vhodné pro společnosti, které nemají vysoké nároky na správu a používají Office 365 nebo Azure Active Directory.
 
 \subsubsection{Landesk}
 Landesk se zaměřuje především na UEM (User Evironment Management) a jeho řešení Landesk Mobility Suite tak zapadá do jeho portfolia jako doplněk pro mobilní zařízení. Je tedy vhodné především pro firmy, které mají potřebu spravovat desktopové prostředí a mobilní zařízení zároveň.
 
 \subsubsection{Další řešení}
-Ostatní řešení byla v \cite{Gartner_EMM_2016} byla prezentována jako mající příliš úzké zaměření, nedostatečnou funkcionalitu nebo nevhodnost pro nasazení ve větším měřítku
+Ostatní řešení byla v \cite{Gartner_EMM_2016} prezentována jako nabízející příliš úzké zaměření, nedostatečnou funkcionalitu nebo nevhodnost pro nasazení ve větším měřítku
 
 
 \section{Výběr řešení pro notebooky}
 
 Vzhledem k požadavkům na bezpečnost a dodržování přísných firemních politik v bance a zároveň k potřebě přístupů k různým typům software a aplikací se zdá jako jediné vhodné řešení BYOD virtualizace desktopu. Způsobů, jakými může virtualizace sloužit pro řešení BYOD je více.
 
-Analýza \cite{ForresterWave} z září roku 2015 od společnosti Forrester se zaměřuje na virtuální desktopy umístěné na vlastním serveru. Výhodou oproti DaaS řešení je, že aplikace i data jsou pod úplnou kontrolou IT oddělení, což snižuje riziko ztráty nebo krádeže dat. Nevýhodou těchto řešení může být problémová funkčnost některých periferních zařízení, jako jsou webové kamery nebo tiskárny. Dále jsou tato řešení velmi citlivá na stabilitu a rychlost internetového připojení a to především u graficky náročnějších aplikací. 
+Analýza \cite{ForresterWave} ze září roku 2015 od společnosti Forrester se zaměřuje na virtuální desktopy umístěné na vlastním serveru. Výhodou oproti DaaS řešení je, že aplikace i data jsou pod úplnou kontrolou IT oddělení, což snižuje riziko ztráty nebo krádeže dat. Nevýhodou těchto řešení může být problémová funkčnost některých periferních zařízení, jako jsou webové kamery nebo tiskárny. Dále jsou tato řešení velmi citlivá na stabilitu a rychlost internetového připojení, a především u graficky náročnějších aplikací. 
 
- \begin{figure}[h!]
+\begin{figure}[h!]
 \includegraphics[width=13cm]{img/Forrester_Wave}
-\caption{The Forrester Wave: Virtuání desktopy umístěné na serveru. Převzato z: \cite{ForresterWave}} 
+\caption{The Forrester Wave: Virtuání desktopy umístěné na serveru. Převzato z: \cite{ForresterWave}.} 
 \label{Forrester_Wave}
 \centering
 \end{figure}
 
-Podle této analýzy jsou jasnými lídry trhu s centralizovanou virtualizací společnosti Citrix a VMWare a to s obrovským tržním i technologickým náskokem. V grafu \ref{Forrester_Wave} je vidět také společnost Dell, která však již vlastní řešení dále nenabízí a prohlubuje spolupráci s produkty od VMWare, jelikož tuto společnost získala akvizicí jejího původního vlastníka, společnosti EMC, v září roku 2016 \cite{DellBuyEMC}.
+Podle této analýzy jsou jasnými lídry trhu s centralizovanou virtualizací společnosti Citrix a VMWare, a to s obrovským tržním i technologickým náskokem. V grafu \ref{Forrester_Wave} je vidět také společnost Dell, která však již vlastní řešení dále nenabízí a prohlubuje spolupráci s produkty od VMWare, jelikož tuto společnost získala akvizicí jejího původního vlastníka společnosti EMC, v září roku 2016 \cite{DellBuyEMC}.
 
-Průzkum trhu od společnosti IDC \cite{IDCVCC} z roku 2016 má širší zaměření, a to na poskytovatele VCC (Virtual Client Computing). Ty definuje jako poskytovatele kteří tvoří a prodávají software pro virtualizaci se zaměřením na centralizované virtuální desktopy, distribuované virtuální desktopy a software pro virtuální uživatelské sezení (VUS). Průzkum je zaměřen především na obchodní úspěch hodnocených společností. Dále doporučuje zohlednit při výběru poskytovatele kvalitu systému pro správu zařízení, bezpečnost řešení, možnosti grafického výstupu a kompaktibilitu s užívanými aplikacemi. 
+Průzkum trhu od společnosti IDC \cite{IDCVCC} z roku 2016 má širší zaměření, a to na poskytovatele VCC (Virtual Client Computing). Ty definuje jako poskytovatele, kteří tvoří a prodávají software pro virtualizaci se zaměřením na centralizované virtuální desktopy, distribuované virtuální desktopy a software pro virtuální uživatelské sezení (VUS). Průzkum je zaměřen především na obchodní úspěch hodnocených společností. Dále doporučuje zohlednit při výběru poskytovatele kvalitu systému pro správu zařízení, bezpečnost řešení, možnosti grafického výstupu a kompaktibilitu s užívanými aplikacemi. 
 
- \begin{figure}[h!]
+\begin{figure}[h!]
 \includegraphics[width=13cm]{img/IDC_VM}
-\caption{IDC MarketScape: Hodnocení dodavatelů VCC. Převzato z: \cite{IDCVCC}} 
+\caption{IDC MarketScape: Hodnocení dodavatelů VCC. Převzato z: \cite{IDCVCC}.} 
 \label{IDC_VM}
 \centering
-\end{figure}%\todo{citace http://campaign.vmware.com/imgs/GlobalCampaigns/39249/IDC\_MarketScape\_Worldwide\_Virtual\_Client\_Computing\_Software\_2016\_Vendor\_Assessment.pdf}
+\end{figure}
 
-Podle tohoto průzkumu trhu s VCC jasně vládnou společnosti VMWare a Citrix. Nikdo další již nebyl zařazen do segmentu lídrů. Za zmínku dále stojí Microsoft, který má silnou pozici na trhu.
+Podle tohoto průzkumu trhu s VCC jasně vládnou společnosti VMWare a Citrix. Nikdo další již nebyl zařazen do segmentu lídrů. Za zmínku dále stojí Microsoft, který má na trhu silnou pozici.
 
 
 
 \subsection{Citrix}
-Řešení XenDesktop se vyznačuje podporou vlastního protokolu HDX %\todo{citace https://www.citrix.com/blogs/2014/08/18/citrix-xendesktopxenapp-what-is-hdx-its-not-just-ica/} 
-díky kterému se snaží o adaptivní kompresi, de-duplikaci síťového provozu a přesměrování tíhy renderování dle okolností na klienta a to na všech podporovaných platformách \cite{CitrixHDX}. Dále podporuje vícenásobné 4k monitory a pokročilé funkce pro multimedia a videokonference. Výhodou je podpora amerického bezpečnostního standardu FIPS 140-2.
+Řešení XenDesktop se vyznačuje podporou vlastního protokolu HDX  díky kterému se snaží o adaptivní kompresi, de-duplikaci síťového provozu a přesměrování tíhy renderování dle okolností na klienta a to na všech podporovaných platformách \cite{CitrixHDX}. Dále podporuje vícenásobné 4k monitory a pokročilé funkce pro multimedia a videokonference. Výhodou je podpora amerického bezpečnostního standardu FIPS 140-2.
 Podle \cite{ForresterWave} má XenDesktop výborné uživatelské hodnocení, avšak technická podpora je pomalá.
 
-Oproti konkurenčnímu produktu od VMWare nabízí Citrix i virtualizaci Linuxových desktopů. Chlubí se třikrát rychlejším tiskem, šestkrát rychlejším spouštěním aplikací, pětkrát rychlejším ukládání souborů či podporou virtualizovaného Skype for Bussiness. Je možné jej nasadit na jakýkoliv cloud, jakýkoliv hypervizor, síť, do cloudu, lokálně či hybridně, viz \cite{CitrixInfo, CitrixPaper}.% \todo{ciace https://www.citrix.com/content/dam/citrix/en\_us/documents/products-solutions/why-choose-citrix-over-vmware-infographic.pdf a https://www.citrix.com/content/dam/citrix/en\_us/documents/white-paper/three-areas-where-citrix-xenapp-and-xendesktop-outperform-vmware-horizon.pdf}
+Oproti konkurenčnímu produktu od VMWare nabízí Citrix i virtualizaci Linuxových desktopů. Chlubí se třikrát rychlejším tiskem, šestkrát rychlejším spouštěním aplikací, pětkrát rychlejším ukládání souborů či podporou virtualizovaného Skype for Bussiness. Je možné jej nasadit na jakýkoliv cloud, jakýkoliv hypervizor, síť, do cloudu, lokálně či hybridně, viz \cite{CitrixInfo, CitrixPaper}.
 
 XenDesktop je možné provozovat také v cloudu. Zvolit lze libovolný hypervizor z nabídky VMWare ESX, Microsoft Hyper-V nebo Citrix XenServer. Pro offline použití existuje hypervizor typu 2 pro MacOS a Windows jménem DesktopPlayer. 
 
@@ -165,16 +162,16 @@ Další produkty pro virtualizaci pracovních prostředí jsou podle výrobce \c
 
 \textbf{Řešení Workstation systém Linux} Produkty řešení VMware Workstation systém Linux představují oborový standard pro používání více operačních systémů jako virtuálních strojů na jednom počítači se systémem Linux.
 
-VMware tvrdí, že jeho řešení nabízí oproti konkurenčnímu Citrixu lepší správu a reporting nebo také centrální správu obrazů systémů ať už pro fyzické, virtuální nebo BYOD stroje \cite{VMBetter}. %\todo{citace http://digital.leadmagz.com/ingrammicro/VMware/VMware\_Why\_Horizon\_over\_Citrix\_Whitepaper.pdf}
+VMware tvrdí, že jeho řešení nabízí oproti konkurenčnímu Citrixu lepší správu a reporting nebo také centrální správu obrazů systémů ať už pro fyzické, virtuální nebo BYOD stroje \cite{VMBetter}. 
 
 
 \subsection{Microsoft}
-Microsoft nabízí virtuální pracovní stanice skrze platformu Windows Server. Nenabízí sice DaaS řešeni, ale nabízí virtualizaci aplikací Microsoft Azure RemoteApp. Ty mohou fungovat buďto v čistě cloudovém nebo hybridním módu. VDI je provozováno pod značkou RDS (Remote Desktop Service) jako uživatelské sezení na Windows Server. Z toho důvodu nenabízí tolik možností nastavení a správy jako plná virtualizace \cite{VMwareMicrosoft}. %\todo{citace http://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/view/vmware-horizon-vs-microsoft-quick-look.pdf}
+Microsoft nabízí virtuální pracovní stanice skrze platformu Windows Server. Nenabízí sice DaaS řešení, ale nabízí virtualizaci aplikací Microsoft Azure RemoteApp. Ty mohou fungovat buďto v čistě cloudovém nebo hybridním módu. VDI je provozováno pod značkou RDS (Remote Desktop Service) jako uživatelské sezení na Windows Server. Z toho důvodu nenabízí tolik možností nastavení a správy jako plná virtualizace \cite{VMwareMicrosoft}.
 
 \subsection{Oracle}
 Oracle nabízí nástroj Secure Global Desktop, který je možné použít s různými hypervizory, je ovšem optimalizovaný pro Oracle. Hlavní devízou řešení je kvalitní konzole pro správu Oracle Enterprise Manager. Podle \cite{ForresterWave} toto řešení není vhodné pro případy užití mimo prostředí s vysokým podílem aplikací od Oracle.
 
-Dále nabízí program VirtualBox. Jedná se o hypervizor typu 2, v základní verzi je zdarma i pro komerční užití. Je zaměřený spíše na vývojáře a nenabízí mnoho nástrojů pro vzdálenou správu \cite{OracleVB}.%\todo{http://www.oracle.com/us/technologies/virtualization/oracle-vm-virtualbox-overview-2981353.pdf}
+Dále nabízí program VirtualBox. Jedná se o hypervizor typu 2, v základní verzi je zdarma i pro komerční užití. Je zaměřený spíše na vývojáře a nenabízí mnoho nástrojů pro vzdálenou správu \cite{OracleVB}.
 
 \subsubsection{Amazon}
 
